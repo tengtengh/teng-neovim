@@ -8,7 +8,7 @@ return require('packer').startup(function()
     use({
         "hrsh7th/nvim-cmp",
         config = function()
-            require("init-cmp")
+            require("user.cmp")
         end,
         requires = {
             { "hrsh7th/cmp-path" },       
@@ -26,7 +26,7 @@ return require('packer').startup(function()
         {
             "neovim/nvim-lspconfig",
             config = function()
-                require("init-lspconf")
+                require("user.nvim-lspconf")
             end
         }
     }
@@ -47,7 +47,7 @@ return require('packer').startup(function()
           'kyazdani42/nvim-web-devicons', -- optional, for file icon
         },
         config = function()
-            require("init-nvim-tree")
+            require("user.nvim-tree")
         end,
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
@@ -57,7 +57,7 @@ return require('packer').startup(function()
         "akinsho/nvim-bufferline.lua",
         tag = "v2.*",
         config = function()
-            require("init-bufferline")
+            require("user.bufferline")
             -- require("bufferline").setup()
         end,
     })
@@ -67,7 +67,7 @@ return require('packer').startup(function()
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         config = function() 
-            require("init-statusline")
+            require("user.statusline")
         end,
     }
 
@@ -84,7 +84,7 @@ return require('packer').startup(function()
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
         config = function()
-            require("init-treesitter")
+            require("user.treesitter")
         end,
     }
 
@@ -105,7 +105,7 @@ return require('packer').startup(function()
         'NTBBloodbath/doom-one.nvim',
         event = "BufEnter",
         config = function()
-            require("init-theme")
+            require("user.theme")
         end,
     })
 
@@ -123,7 +123,7 @@ return require('packer').startup(function()
     use({
         "nvim-telescope/telescope.nvim",
         config = function()
-            require("init-telescope")
+            require("user.telescope")
         end,
     })
 
