@@ -18,25 +18,24 @@ local M = {}
 -- end
 
 
-
--- 光标指向一个变量，其他位置的该变量，都会有一点高亮
--- 没有生效，我不知道为什么
-local function lsp_highlight_document(client)
-  -- set autocommands conditional on server_capabilities
-  -- if client.resolved_capabilities.document_highlight then
-  if client.server_capabilities.document_highlight then
-    vim.api.nvim_exec(
-      [[
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd cursorhold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd cursormoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup end
-    ]],
-      false
-    )
-  end
-end
+--
+-- -- 光标指向一个变量，其他位置的该变量，都会有一点高亮
+-- -- 没有生效，我不知道为什么
+-- local function lsp_highlight_document(client)
+--   -- set autocommands conditional on server_capabilities
+--   if client.resolved_capabilities.document_highlight then
+--     vim.api.nvim_exec(
+--       [[
+--       augroup lsp_document_highlight
+--         autocmd! * <buffer>
+--         autocmd cursorhold <buffer> lua vim.lsp.buf.document_highlight()
+--         autocmd cursormoved <buffer> lua vim.lsp.buf.clear_references()
+--       augroup end
+--     ]],
+--       false
+--     )
+--   end
+-- end
 
 
 
@@ -84,11 +83,11 @@ end
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 M.on_attach = function(client, bufnr)
-  if client.name == "tsserver" then
-    client.resolved_capabilities.document_formatting = false
-  end
+  -- if client.name == "tsserver" then
+  --   client.resolved_capabilities.document_formatting = false
+  -- end
   lsp_keymaps(bufnr)
-  lsp_highlight_document(client)
+  -- lsp_highlight_document(client)
 end
 
 

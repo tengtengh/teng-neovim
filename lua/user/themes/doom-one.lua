@@ -1,22 +1,15 @@
 
---[[
-local onedarkpro = require("onedarkpro")
-onedarkpro.setup({
-    options = {
-        transparency = true
-    }
-})
-onedarkpro.load()
+-- for doom-one colorscheme
 
 
+local status_ok, doom_one = pcall(require, "doom-one")
+if not status_ok then
+  vim.notify("doom-one theme not found!")
+  return
+end
 
---]]
 
-
-
-local doomone_colorscheme = require("doom-one")
-
-doomone_colorscheme.setup({
+doom_one.setup({
 
         cursor_coloring = false,
         terminal_colors = false,

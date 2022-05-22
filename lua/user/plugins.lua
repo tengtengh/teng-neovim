@@ -71,6 +71,16 @@ return require('packer').startup(function()
         end,
     }
 
+    -- -- statusline
+    -- use {
+    --     'beauwilliams/statusline.lua',
+    --     config = function()
+    --         local statusline = require('statusline')
+    --         statusline.tabline = false
+    --     end
+    -- }
+
+
     -- autopairs
     use {
         'windwp/nvim-autopairs',
@@ -88,35 +98,36 @@ return require('packer').startup(function()
         end,
     }
 
-
-
-    -- -- statusline
-    -- use {
-    --     'beauwilliams/statusline.lua',
-    --     config = function()
-    --         local statusline = require('statusline')
-    --         statusline.tabline = false
-    --     end
-    -- }
-
-
+    ----------colorschemes------------------------------
+    --colorscheme   -- blue-moon
+    use "kyazdani42/blue-moon"
     -- colorscheme  -- onedarkpro
     use({
-        'NTBBloodbath/doom-one.nvim',
-        event = "BufEnter",
-        config = function()
-            require("user.theme")
-        end,
+        "olimorris/onedarkpro.nvim",
+        -- event = "BufEnter",
+        -- config = function()
+        --     require("user.theme")
+        -- end,
     })
-
-    -- -- colorscheme  -- onedarkpro
-    -- use({
-    --     "olimorris/onedarkpro.nvim",
-    --     event = "BufEnter",
-    --     config = function()
-    --         require("init-theme")
-    --     end,
-    -- })
+    use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+    -- colorscheme -- github-nvim-theme
+    use {
+        "projekt0n/github-nvim-theme",
+        -- tag = "v0.0.4",  -- 敲代码的脱发水哥加了这个，我不能加，否则nvim-treesitter在lua文件报错(一片红)
+    }
+    -- colorscheme -- catppuccin
+    use({
+        "catppuccin/nvim",
+        as = "catppuccin"
+    })
+    -- colorscheme  -- doom-one
+    use({
+        'NTBBloodbath/doom-one.nvim',
+        -- event = "BufEnter",
+        -- config = function()
+        --     require("user.themes.doom-one")
+        -- end,
+    })
 
 
     -- fuzzy finder
