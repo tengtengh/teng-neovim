@@ -3,7 +3,7 @@ return {
 
     settings = {
     	Lua = {
-    		diagnostics = { globals = { "vim", "packer_plugins" } },
+    		diagnostics = { globals = { "vim", "use" , "packer_plugins" } },
     		workspace = {
     			library = {
     				[vim.fn.expand("$VIMRUNTIME/lua")] = true,

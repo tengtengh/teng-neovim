@@ -3,7 +3,7 @@
 return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    
+
     -- auto completion
     use({
         "hrsh7th/nvim-cmp",
@@ -11,7 +11,7 @@ return require('packer').startup(function()
             require("user.cmp")
         end,
         requires = {
-            { "hrsh7th/cmp-path" },       
+            { "hrsh7th/cmp-path" },
             { "hrsh7th/cmp-buffer" },       -- Autocompletion plugin
             { "hrsh7th/cmp-nvim-lsp" },     -- LSP source for nvim-cmp
             -- snippet support
@@ -30,7 +30,7 @@ return require('packer').startup(function()
             end
         }
     }
-    
+
     -- comment
     use {
         'numToStr/Comment.nvim',
@@ -66,7 +66,7 @@ return require('packer').startup(function()
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-        config = function() 
+        config = function()
             require("user.statusline")
         end,
     }
@@ -74,7 +74,7 @@ return require('packer').startup(function()
     -- autopairs
     use {
         'windwp/nvim-autopairs',
-        config = function() 
+        config = function()
             require('nvim-autopairs').setup{}
         end,
     }
@@ -99,7 +99,7 @@ return require('packer').startup(function()
     --     end
     -- }
 
-   
+
     -- colorscheme  -- onedarkpro
     use({
         'NTBBloodbath/doom-one.nvim',

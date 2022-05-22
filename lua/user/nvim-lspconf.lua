@@ -35,10 +35,10 @@ for _, server in ipairs(servers) do
     local server_opts = {
 	    on_attach = require("user.lsp.handlers").on_attach,
 		-- capabilities = require("user.lsp.handlers").capabilities,
-        -- flags = {
-        --     -- This will be the default in neovim 0.7+
-        --     debounce_text_changes = 150,
-        -- }
+        flags = {
+            -- This will be the default in neovim 0.7+
+            debounce_text_changes = 150,
+        }
 	}
     if server.name == "sumneko_lua" then
         local sumneko_lua_opts = require("user.lsp.settings.sumneko_lua")
