@@ -52,6 +52,13 @@ return require('packer').startup(function()
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
+    use {
+        'stevearc/aerial.nvim',
+        config = function()
+            require('aerial').setup()
+        end
+    }
+
     -- clickable buffer line
     use({
         "akinsho/nvim-bufferline.lua",
