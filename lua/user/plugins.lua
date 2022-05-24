@@ -89,6 +89,28 @@ return require('packer').startup(function()
     --     end
     -- }
 
+    -- vim surround
+    use "tpope/vim-surround"
+
+    -- markdown-preview
+    use {
+        "iamcco/markdown-preview.nvim",
+    }
+    -- 或者 手动执行 :call mkdp#util#install()
+    vim.cmd([[  execute 'call mkdp#util#install()'  ]])
+
+    -- 安装插件(markdown图片粘贴)
+    use {
+        'ferrine/md-img-paste.vim',
+        config = function()
+            require('user.markdown.md-img-paste')
+        end
+
+    }
+
+    -- 生成markdown目录的插件
+    use 'mzlogin/vim-markdown-toc'
+
 
     -- autopairs
     use {
