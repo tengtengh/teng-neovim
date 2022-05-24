@@ -52,10 +52,11 @@ return require('packer').startup(function()
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
+    -- 右侧函数名、markdown标题等 文件大纲视图
     use {
         'stevearc/aerial.nvim',
         config = function()
-            require('aerial').setup()
+            require('user.aerial')
         end
     }
 
