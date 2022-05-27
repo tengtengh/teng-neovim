@@ -1,4 +1,36 @@
 
+-- -- 默认情况下为0，将为 git 属性启用文件突出显示（可以在没有图标的情况下使用）
+-- vim.g.nvim_tree_git_hl = 1 -- 0 by default, will enable file highlight for git attributes (can be used without the icons).
+
+-- -- 默认为0，在文件夹名称后面附加一个斜杠
+-- vim.gnvim_tree_add_trailing = 1 -- 0 by default, append a trailing slash to folder names
+
+-- 默认为0，将仅包含单个文件夹的文件夹压缩到文件树中的一个节点中
+vim.g.nvim_tree_group_empty = 1  -- 0 by default, compact folders that only contain a single folder into one node in the file tree
+
+-- -- 默认一个空格，用于渲染图标和文件名之间的空格。谨慎使用，如果根据字体设置空字符串，可能会破坏渲染。
+-- vim.g.nvim_tree_icon_padding = ' ' -- one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
+
+-- -- 默认为 ' ➛ '。用作符号链接源和目标之间的分隔符。
+-- vim.g.nvim_tree_symlink_arrow = ' >> ' -- defaults to ' ➛ '. used as a separator between symlinks' source and target.
+
+-- -- 默认一个空格，用于渲染图标和文件名之间的空格。谨慎使用，如果根据字体设置空字符串，可能会破坏渲染。
+-- vim.g.nvim_tree_icon_padding = ' ' -- one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
+
+-- -- 默认为 ' ➛ '。用作符号链接源和目标之间的分隔符。
+-- vim.g.nvim_tree_symlink_arrow = ' >> ' --  defaults to ' ➛ '. used as a separator between symlinks' source and target.
+
+-- -- 默认情况下，将在打开 nvim-tree 时将 nvim-tree 的 cwd 更改为新缓冲区的 cwd。
+-- vim.g.nvim_tree_respect_buf_cwd = 1 -- 0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
+
+-- -- 默认为0，创建文件时，将光标在关闭文件夹上的文件路径设置为0时为父文件夹，为1时设置在文件夹内。
+-- vim.g.nvim_tree_create_in_closed_folder = 1 -- 0 by default, When creating files, sets the path of a file when cursor is on a closed folder to the parent folder when 0, and inside the folder when 1.
+
+-- -- 使用 NvimTreeSpecialFile 突出显示的文件名列表
+-- vim.g.nvim_tree_special_files = { "README.md", 'Makefile', 'MAKEFILE' } --  List of filenames that gets highlighted with NvimTreeSpecialFile
+
+
+
 
 vim.g.nvim_tree_icons = {
     default = "",
