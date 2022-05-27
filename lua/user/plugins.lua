@@ -4,6 +4,9 @@ return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- lua functions
+    use("nvim-lua/plenary.nvim")
+
     -- auto completion
     use({
         "hrsh7th/nvim-cmp",
@@ -164,10 +167,19 @@ return require('packer').startup(function()
     -- fuzzy finder
     use({
         "nvim-telescope/telescope.nvim",
+        -- tag = "nvim-0.8",
         config = function()
             require("user.telescope")
+            -- require('telescope').setup{}
         end,
     })
+
+    -- media file preview extension for telescope
+    use("nvim-telescope/telescope-media-files.nvim")
+
+
+
+
 
 end)
 
