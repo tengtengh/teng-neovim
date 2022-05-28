@@ -82,6 +82,13 @@ return require('packer').startup(function()
         end,
     }
 
+    -- Git
+    use {
+        "lewis6991/gitsigns.nvim";
+        config = function ()
+            require("user.gitsigns")
+        end
+    }
 
     -- -- statusline
     -- use {
@@ -174,8 +181,8 @@ return require('packer').startup(function()
         end,
     })
 
-    -- media file preview extension for telescope
-    use("nvim-telescope/telescope-media-files.nvim")
+    -- -- media file preview extension for telescope
+    -- use("nvim-telescope/telescope-media-files.nvim")
 
 
 
