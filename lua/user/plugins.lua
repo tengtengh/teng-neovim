@@ -34,6 +34,9 @@ return require('packer').startup(function()
         }
     }
 
+    -- highlight undercursor word
+    use "RRethy/vim-illuminate"
+
     -- comment
     use {
         'numToStr/Comment.nvim',
@@ -150,7 +153,7 @@ return require('packer').startup(function()
         --     require("user.theme")
         -- end,
     })
-    use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+    -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
     -- colorscheme -- github-nvim-theme
     use {
         "projekt0n/github-nvim-theme",
@@ -169,6 +172,8 @@ return require('packer').startup(function()
         --     require("user.themes.doom-one")
         -- end,
     })
+    -- onedark.nvim
+    use 'navarasu/onedark.nvim'
 
 
     -- fuzzy finder
