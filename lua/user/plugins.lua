@@ -76,21 +76,21 @@ return require('packer').startup(function()
         end,
     })
 
-    -- statusline
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-        config = function()
-            require("user.statusline")
-        end,
-    }
-
     -- Git
     use {
         "lewis6991/gitsigns.nvim";
         config = function ()
             require("user.gitsigns")
         end
+    }
+
+    -- statusline
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+        config = function()
+            require("user.lualine")
+        end,
     }
 
     -- -- statusline
