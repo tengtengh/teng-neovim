@@ -108,9 +108,10 @@ return require('packer').startup(function()
     -- markdown-preview
     use {
         "iamcco/markdown-preview.nvim",
+        run = ":call mkdp#util#install()",
     }
     -- 或者 手动执行 :call mkdp#util#install()
-    vim.cmd([[  execute 'call mkdp#util#install()'  ]])
+    -- vim.cmd([[  execute 'call mkdp#util#install()'  ]])
 
     -- 安装插件(markdown图片粘贴)
     use {
@@ -141,6 +142,20 @@ return require('packer').startup(function()
             require("user.treesitter")
         end,
     }
+
+
+    -- Debugger
+    use 'ravenxrz/dapinstall.nvim'
+    use 'theHamsta/nvim-dap-virtual-text'
+    use "rcarriga/nvim-dap-ui"
+    use {
+        "mfussenegger/nvim-dap",
+        config = function ()
+            require("user.dap.dap-init")
+        end
+
+    }
+
 
     ----------colorschemes------------------------------
     --colorscheme   -- blue-moon
@@ -174,7 +189,8 @@ return require('packer').startup(function()
     })
     -- onedark.nvim
     use 'navarasu/onedark.nvim'
-
+    --tokyonight
+    use 'folke/tokyonight.nvim'
 
     -- fuzzy finder
     use({

@@ -6,6 +6,7 @@
 -- local colorscheme = "doom-one"
 -- local colorscheme = "onedarker"
 local colorscheme = "github_light"
+-- local colorscheme = "tokyonight"
 -- local colorscheme = "onedark"
 -- local colorscheme = "onedarkpro"
 
@@ -17,6 +18,8 @@ end
 
 if colorscheme == "github_light" then
   require "user.themes.github-nvim-theme"
+elseif colorscheme == "tokyonight" then
+  require "user.themes.tokyonight"
 elseif colorscheme == "onedark" then
   require "user.themes.onedark"
 elseif colorscheme == "catppuccin" then
