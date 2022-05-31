@@ -148,13 +148,8 @@ return require('packer').startup(function()
     use 'ravenxrz/dapinstall.nvim'
     use 'theHamsta/nvim-dap-virtual-text'
     use "rcarriga/nvim-dap-ui"
-    use {
-        "mfussenegger/nvim-dap",
-        config = function ()
-            require("user.dap.dap-init")
-        end
+    use "mfussenegger/nvim-dap"
 
-    }
 
 
     ----------colorschemes------------------------------
