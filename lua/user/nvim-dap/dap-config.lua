@@ -34,6 +34,7 @@ local function config_dapi_and_sign()
 end
 
 local function config_dapui()
+
     local dap, dapui = require("dap"), require("dapui")
     dap.listeners.after.event_initialized["dapui_config"] = function()
         dapui.open()
@@ -42,6 +43,9 @@ local function config_dapui()
         dapui.close()
     end
     dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close()
+    end
+    dap.listeners.before.disconnect["dapui_config"] = function()
         dapui.close()
     end
 
@@ -55,13 +59,13 @@ local function config_debuggers()
   dap.set_log_level("DEBUG")
 
   -- load from json file
-  require('dap.ext.vscode').load_launchjs(nil, { cppdbg = {'c', 'cpp'} })
+  -- require('dap.ext.vscode').load_launchjs()
   -- require('dap.ext.vscode').load_launchjs(nil, { cppdbg = { 'cpp' } })
   -- config per launage
-  -- require("user.dap.di-cpp")
+  require("user.nvim-dap.di-cpp")
+  -- require("user.nvim-dap.dap-cpp")
   -- require("user.dap.di-go")
 
-  require("user.dap.dap-cpp")
   -- require("user.dap.dap-go")
   -- require("user.dap.dap-python")
   -- require("user.dap.dap-lua")
@@ -69,6 +73,10 @@ local function config_debuggers()
   -- require("config.dap.python").setup()
   -- require("config.dap.rust").setup()
   -- require("config.dap.go").setup()
+
+
+  --得写在下面，写在上面不行，我也不知道为什么
+  require('dap.ext.vscode').load_launchjs(nil, { cppdbg = {'cpp'} })
 end
 
 -- local function dap_keymap()

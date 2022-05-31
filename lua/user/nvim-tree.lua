@@ -136,8 +136,9 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     exclude = {},
   },
   git = {
-    enable = true,
-    ignore = true,
+    enable = ture,
+    -- ignore = true,
+    ignore = false, -- 默认为true, nvim-tree中忽略.gitignore中的文件(夹)
     timeout = 400,
   },
   actions = {
