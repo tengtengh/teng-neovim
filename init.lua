@@ -13,6 +13,7 @@ require('user.keymaps')
 require('user.plugins')
 require('user.colorscheme')
 
+require('user.config')
 require('user.nvim-dap')
 
 -- require('dap.ext.vscode').load_launchjs()

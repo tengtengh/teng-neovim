@@ -4,6 +4,9 @@ return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- Speed up loading Lua modules
+    use "lewis6991/impatient.nvim"
+
     -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/popup.nvim"
 
@@ -13,9 +16,9 @@ return require('packer').startup(function()
     -- auto completion
     use({
         "hrsh7th/nvim-cmp",
-        config = function()
-            require("user.cmp")
-        end,
+        -- config = function()
+        --     require("user.config.cmp")
+        -- end,
         requires = {
             { "hrsh7th/cmp-path" },
             { "hrsh7th/cmp-buffer" },       -- Autocompletion plugin
@@ -32,9 +35,9 @@ return require('packer').startup(function()
         "williamboman/nvim-lsp-installer",
         {
             "neovim/nvim-lspconfig",
-            config = function()
-                require("user.nvim-lspconf")
-            end
+            -- config = function()
+            --     require("user.config.nvim-lspconf")
+            -- end
         }
     }
 
@@ -44,9 +47,9 @@ return require('packer').startup(function()
     -- comment
     use {
         'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
+        -- config = function()
+        --     require('Comment').setup()
+        -- end
     }
 
 
@@ -56,54 +59,46 @@ return require('packer').startup(function()
         requires = {
           'kyazdani42/nvim-web-devicons', -- optional, for file icon
         },
-        config = function()
-            require("user.nvim-tree")
-        end,
+        -- config = function()
+        --     require("user.config.nvim-tree")
+        -- end,
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
     -- 右侧函数名、markdown标题等 文件大纲视图
     use {
         'stevearc/aerial.nvim',
-        config = function()
-            require('user.aerial')
-        end
+        -- config = function()
+        --     require('user.config.aerial')
+        -- end
     }
 
     -- clickable buffer line
     use({
         "akinsho/nvim-bufferline.lua",
         tag = "v2.*",
-        config = function()
-            require("user.bufferline")
-            -- require("bufferline").setup()
-        end,
+        -- config = function()
+        --     require("user.config.bufferline")
+        --     -- require("bufferline").setup()
+        -- end,
     })
 
     -- Git
     use {
         "lewis6991/gitsigns.nvim";
-        config = function ()
-            require("user.gitsigns")
-        end
+        -- config = function ()
+        --     require("user.config.gitsigns")
+        -- end
     }
 
     -- statusline
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-        config = function()
-            require("user.lualine")
-        end,
+        -- config = function()
+        --     require("user.config.lualine")
+        -- end,
     }
-    -- -- statusline
-    -- use {
-    --     'beauwilliams/statusline.lua',
-    --     config = function()
-    --         local statusline = require('statusline')
-    --         statusline.tabline = false
-    --     end
-    -- }
 
     -- vim surround
     use "tpope/vim-surround"
@@ -132,34 +127,34 @@ return require('packer').startup(function()
     use {
         "akinsho/toggleterm.nvim",
         tag = 'v1.*',
-        config = function()
-            require("user.toggleterm")
-        end
+        -- config = function()
+        --     require("user.config.toggleterm")
+        -- end
     }
 
     -- notify
     use {
         "rcarriga/nvim-notify",
-        config = function()
-            require('user.nvim-notify')
-        end,
+        -- config = function()
+        --     require('user.config.nvim-notify')
+        -- end,
     }
 
     -- autopairs
     use {
         'windwp/nvim-autopairs',
-        config = function()
-            require('nvim-autopairs').setup{}
-        end,
+        -- config = function()
+        --     require('nvim-autopairs').setup{}
+        -- end,
     }
 
     -- Made neovim syntax highlighting more
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
-        config = function()
-            require("user.treesitter")
-        end,
+        -- config = function()
+        --     require("user.config.treesitter")
+        -- end,
     }
 
 
@@ -204,10 +199,10 @@ return require('packer').startup(function()
     use({
         "nvim-telescope/telescope.nvim",
         -- tag = "nvim-0.8",
-        config = function()
-            require("user.telescope")
-            -- require('telescope').setup{}
-        end,
+        -- config = function()
+        --     require("user.config.telescope")
+        --     -- require('telescope').setup{}
+        -- end,
     })
     -- -- media file preview extension for telescope
     -- use("nvim-telescope/telescope-media-files.nvim")
