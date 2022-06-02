@@ -4,6 +4,9 @@ return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- An implementation of the Popup API from vim in Neovim
+    use "nvim-lua/popup.nvim"
+
     -- lua functions
     use("nvim-lua/plenary.nvim")
 
@@ -19,7 +22,8 @@ return require('packer').startup(function()
             { "hrsh7th/cmp-nvim-lsp" },     -- LSP source for nvim-cmp
             -- snippet support
             { "L3MON4D3/LuaSnip" },         -- Snippets plugin
-            { "saadparwaiz1/cmp_luasnip" }  -- snippets source for nvim-cmp
+            { "saadparwaiz1/cmp_luasnip" },  -- snippets source for nvim-cmp
+            { "hrsh7th/cmp-cmdline"},
         },
     })
 
@@ -92,7 +96,6 @@ return require('packer').startup(function()
             require("user.lualine")
         end,
     }
-
     -- -- statusline
     -- use {
     --     'beauwilliams/statusline.lua',
@@ -105,6 +108,7 @@ return require('packer').startup(function()
     -- vim surround
     use "tpope/vim-surround"
 
+    -- >>>>>>>>>>> Markdown >>>>>>>>>>>>
     -- markdown-preview
     use {
         "iamcco/markdown-preview.nvim",
@@ -112,7 +116,6 @@ return require('packer').startup(function()
     }
     -- 或者 手动执行 :call mkdp#util#install()
     -- vim.cmd([[  execute 'call mkdp#util#install()'  ]])
-
     -- 安装插件(markdown图片粘贴)
     use {
         'ferrine/md-img-paste.vim',
@@ -121,10 +124,26 @@ return require('packer').startup(function()
         end
 
     }
-
     -- 生成markdown目录的插件
     use 'mzlogin/vim-markdown-toc'
+    -- <<<<<<<<<<<< Markdown <<<<<<<<<<<<
 
+    -- terminal intergration
+    use {
+        "akinsho/toggleterm.nvim",
+        tag = 'v1.*',
+        config = function()
+            require("user.toggleterm")
+        end
+    }
+
+    -- notify
+    use {
+        "rcarriga/nvim-notify",
+        config = function()
+            require('user.nvim-notify')
+        end,
+    }
 
     -- autopairs
     use {
@@ -152,18 +171,15 @@ return require('packer').startup(function()
 
 
 
-    ----------colorschemes------------------------------
+    -- >>>>>>>>>>>>> colorschemes >>>>>>>>>>>>>
     --colorscheme   -- blue-moon
     use "kyazdani42/blue-moon"
     -- colorscheme  -- onedarkpro
     use({
         "olimorris/onedarkpro.nvim",
-        -- event = "BufEnter",
-        -- config = function()
-        --     require("user.theme")
-        -- end,
     })
-    -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+    -- -- A bunch of colorschemes you can try out
+    -- use "lunarvim/colorschemes"
     -- colorscheme -- github-nvim-theme
     use {
         "projekt0n/github-nvim-theme",
@@ -177,17 +193,14 @@ return require('packer').startup(function()
     -- colorscheme  -- doom-one
     use({
         'NTBBloodbath/doom-one.nvim',
-        -- event = "BufEnter",
-        -- config = function()
-        --     require("user.themes.doom-one")
-        -- end,
     })
-    -- onedark.nvim
+    -- colorscheme -- onedark.nvim
     use 'navarasu/onedark.nvim'
     --tokyonight
     use 'folke/tokyonight.nvim'
+    -- <<<<<<<<<<<<< colorschemes <<<<<<<<<<<<<
 
-    -- fuzzy finder
+    -- telescope
     use({
         "nvim-telescope/telescope.nvim",
         -- tag = "nvim-0.8",
@@ -196,7 +209,6 @@ return require('packer').startup(function()
             -- require('telescope').setup{}
         end,
     })
-
     -- -- media file preview extension for telescope
     -- use("nvim-telescope/telescope-media-files.nvim")
 

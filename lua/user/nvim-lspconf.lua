@@ -11,7 +11,7 @@ lsp_installer.setup({})
 local nvim_lsp = require("lspconfig")
 
 
--- require("user.lsp.handlers").setup()
+require("user.lsp.handlers").setup()
 
 
 
@@ -34,7 +34,7 @@ local servers = lsp_installer.get_installed_servers()
 for _, server in ipairs(servers) do
     local server_opts = {
 	    on_attach = require("user.lsp.handlers").on_attach,
-		-- capabilities = require("user.lsp.handlers").capabilities,
+		capabilities = require("user.lsp.handlers").capabilities,
         flags = {
             -- This will be the default in neovim 0.7+
             debounce_text_changes = 150,

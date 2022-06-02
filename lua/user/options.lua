@@ -14,6 +14,10 @@ vim.o.ruler = true
 vim.o.mouse = 'a' --Turn on the mouse function
 vim.o.ignorecase = true
 vim.o.smartcase = true
+-- vim.o.splitbelow = true
+-- vim.o.splitright = true
+-- vim.o.cscopequickfix="s-,c-,d-,i-,t-,e-"       -- cscope output to quickfix window
+
 
 vim.g.mapleader = ';'
 

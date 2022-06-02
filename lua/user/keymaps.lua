@@ -17,6 +17,9 @@ local keymap = vim.api.nvim_set_keymap
 --   command_mode = "c";
 
 -- Normal --
+-- -- <ESC>--
+-- keymap("i", "jk", "<ESC>", {})
+
 -- save(w), quit(q, q!), Ctrl+z, :e
 keymap("n", "<leader>w", ":w<CR>", {noremap = true})
 keymap("n", "<leader>q", ":q<CR>", {noremap = true})
