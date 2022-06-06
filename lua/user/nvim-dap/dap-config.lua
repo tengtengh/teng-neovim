@@ -8,31 +8,31 @@ local function config_dapi_and_sign()
         installation_path = vim.fn.stdpath "data" .. "/dapinstall/",
     }
 
-    local dap_breakpoint = {
-        error = {
-            -- text = "🛑",
-            text = "🔴",
-            texthl = "LspDiagnosticsSignError",
-            linehl = "",
-            numhl = "",
-        },
-        rejected = {
-            text = "",
-            texthl = "LspDiagnosticsSignHint",
-            linehl = "",
-            numhl = "",
-        },
-        stopped = {
-            text = "⭐️",
-            texthl = "LspDiagnosticsSignInformation",
-            linehl = "DiagnosticUnderlineInfo",
-            numhl = "LspDiagnosticsSignInformation",
-        },
-    }
-
-    vim.fn.sign_define("DapBreakpoint", dap_breakpoint.error)
-    vim.fn.sign_define("DapStopped", dap_breakpoint.stopped)
-    vim.fn.sign_define("DapBreakpointRejected", dap_breakpoint.rejected)
+    -- local dap_breakpoint = {
+    --     error = {
+    --         -- text = "🛑",
+    --         text = "🔴",
+    --         texthl = "LspDiagnosticsSignError",
+    --         linehl = "",
+    --         numhl = "",
+    --     },
+    --     rejected = {
+    --         text = "",
+    --         texthl = "LspDiagnosticsSignHint",
+    --         linehl = "",
+    --         numhl = "",
+    --     },
+    --     stopped = {
+    --         text = "⭐️",
+    --         texthl = "LspDiagnosticsSignInformation",
+    --         linehl = "DiagnosticUnderlineInfo",
+    --         numhl = "LspDiagnosticsSignInformation",
+    --     },
+    -- }
+    --
+    -- vim.fn.sign_define("DapBreakpoint", dap_breakpoint.error)
+    -- vim.fn.sign_define("DapStopped", dap_breakpoint.stopped)
+    -- vim.fn.sign_define("DapBreakpointRejected", dap_breakpoint.rejected)
 end
 
 local function config_dapui()
@@ -101,7 +101,7 @@ function M.setup()
     config_dapui()
     config_debuggers() -- Debugger
     -- dap_keymap()
-    -- config_dapi_and_sign()
+    config_dapi_and_sign()
 end
 
 return M

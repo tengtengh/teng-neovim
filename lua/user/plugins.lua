@@ -77,27 +77,15 @@ return require('packer').startup(function()
     use({
         "akinsho/nvim-bufferline.lua",
         tag = "v2.*",
-        -- config = function()
-        --     require("user.config.bufferline")
-        --     -- require("bufferline").setup()
-        -- end,
     })
 
     -- Git
-    use {
-        "lewis6991/gitsigns.nvim";
-        -- config = function ()
-        --     require("user.config.gitsigns")
-        -- end
-    }
+    use {"lewis6991/gitsigns.nvim";}
 
     -- statusline
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-        -- config = function()
-        --     require("user.config.lualine")
-        -- end,
     }
 
     -- vim surround
@@ -117,7 +105,6 @@ return require('packer').startup(function()
         config = function()
             require('user.markdown.md-img-paste')
         end
-
     }
     -- 生成markdown目录的插件
     use 'mzlogin/vim-markdown-toc'
@@ -127,25 +114,14 @@ return require('packer').startup(function()
     use {
         "akinsho/toggleterm.nvim",
         tag = 'v1.*',
-        -- config = function()
-        --     require("user.config.toggleterm")
-        -- end
     }
 
     -- notify
-    use {
-        "rcarriga/nvim-notify",
-        -- config = function()
-        --     require('user.config.nvim-notify')
-        -- end,
-    }
+    -- use "rcarriga/nvim-notify"
 
     -- autopairs
     use {
         'windwp/nvim-autopairs',
-        -- config = function()
-        --     require('nvim-autopairs').setup{}
-        -- end,
     }
 
     -- Made neovim syntax highlighting more
@@ -164,15 +140,18 @@ return require('packer').startup(function()
     use "rcarriga/nvim-dap-ui"
     use "mfussenegger/nvim-dap"
 
-
+    -- indent blankline
+    use "lukas-reineke/indent-blankline.nvim"
 
     -- >>>>>>>>>>>>> colorschemes >>>>>>>>>>>>>
-    --colorscheme   -- blue-moon
+    -- colorscheme -- EdenEast/nightfox.nvim
+    use "EdenEast/nightfox.nvim"
+    -- colorscheme -- vscode.nvim
+    use 'Mofiqul/vscode.nvim'
+    --  colorscheme   -- blue-moon
     use "kyazdani42/blue-moon"
     -- colorscheme  -- onedarkpro
-    use({
-        "olimorris/onedarkpro.nvim",
-    })
+    use "olimorris/onedarkpro.nvim"
     -- -- A bunch of colorschemes you can try out
     -- use "lunarvim/colorschemes"
     -- colorscheme -- github-nvim-theme
@@ -186,9 +165,7 @@ return require('packer').startup(function()
         as = "catppuccin"
     })
     -- colorscheme  -- doom-one
-    use({
-        'NTBBloodbath/doom-one.nvim',
-    })
+    use 'NTBBloodbath/doom-one.nvim'
     -- colorscheme -- onedark.nvim
     use 'navarasu/onedark.nvim'
     --tokyonight
@@ -196,14 +173,7 @@ return require('packer').startup(function()
     -- <<<<<<<<<<<<< colorschemes <<<<<<<<<<<<<
 
     -- telescope
-    use({
-        "nvim-telescope/telescope.nvim",
-        -- tag = "nvim-0.8",
-        -- config = function()
-        --     require("user.config.telescope")
-        --     -- require('telescope').setup{}
-        -- end,
-    })
+    use "nvim-telescope/telescope.nvim"
     -- -- media file preview extension for telescope
     -- use("nvim-telescope/telescope-media-files.nvim")
 
