@@ -21,12 +21,12 @@ return require('packer').startup(function()
         -- end,
         requires = {
             { "hrsh7th/cmp-path" },
-            { "hrsh7th/cmp-buffer" },       -- Autocompletion plugin
-            { "hrsh7th/cmp-nvim-lsp" },     -- LSP source for nvim-cmp
+            { "hrsh7th/cmp-buffer" }, -- Autocompletion plugin
+            { "hrsh7th/cmp-nvim-lsp" }, -- LSP source for nvim-cmp
             -- snippet support
-            { "L3MON4D3/LuaSnip" },         -- Snippets plugin
-            { "saadparwaiz1/cmp_luasnip" },  -- snippets source for nvim-cmp
-            { "hrsh7th/cmp-cmdline"},
+            { "L3MON4D3/LuaSnip" }, -- Snippets plugin
+            { "saadparwaiz1/cmp_luasnip" }, -- snippets source for nvim-cmp
+            { "hrsh7th/cmp-cmdline" },
         },
     })
 
@@ -57,13 +57,16 @@ return require('packer').startup(function()
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {
-          'kyazdani42/nvim-web-devicons', -- optional, for file icon
+            'kyazdani42/nvim-web-devicons', -- optional, for file icon
         },
         -- config = function()
         --     require("user.config.nvim-tree")
         -- end,
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
+
+    -- welcome page
+    use "goolord/alpha-nvim"
 
     -- 右侧函数名、markdown标题等 文件大纲视图
     use {
@@ -80,7 +83,7 @@ return require('packer').startup(function()
     })
 
     -- Git
-    use {"lewis6991/gitsigns.nvim";}
+    use { "lewis6991/gitsigns.nvim"; }
 
     -- statusline
     use {
@@ -108,6 +111,13 @@ return require('packer').startup(function()
     }
     -- 生成markdown目录的插件
     use 'mzlogin/vim-markdown-toc'
+
+    -- use {
+    --     'lukas-reineke/headlines.nvim',
+    --     config = function()
+    --         require('user.markdown.headlines')
+    --     end,
+    -- }
     -- <<<<<<<<<<<< Markdown <<<<<<<<<<<<
 
     -- terminal intergration
@@ -117,7 +127,7 @@ return require('packer').startup(function()
     }
 
     -- notify
-    -- use "rcarriga/nvim-notify"
+    use "rcarriga/nvim-notify"
 
     -- autopairs
     use {
@@ -137,7 +147,10 @@ return require('packer').startup(function()
     -- Debugger
     use 'ravenxrz/dapinstall.nvim'
     use 'theHamsta/nvim-dap-virtual-text'
-    use "rcarriga/nvim-dap-ui"
+    use {
+        "rcarriga/nvim-dap-ui",
+        tag = "v0.34.0",
+    }
     use "mfussenegger/nvim-dap"
 
     -- indent blankline
@@ -151,7 +164,14 @@ return require('packer').startup(function()
     --  colorscheme   -- blue-moon
     use "kyazdani42/blue-moon"
     -- colorscheme  -- onedarkpro
-    use "olimorris/onedarkpro.nvim"
+    use {
+        "olimorris/onedarkpro.nvim",
+
+        -- -- event = "BufEnter",
+        -- config = function()
+        --     require "user.themes.onedarkpro"
+        -- end,
+    }
     -- -- A bunch of colorschemes you can try out
     -- use "lunarvim/colorschemes"
     -- colorscheme -- github-nvim-theme
@@ -182,7 +202,3 @@ return require('packer').startup(function()
 
 
 end)
-
-
-
-

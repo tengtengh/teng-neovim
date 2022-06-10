@@ -57,6 +57,7 @@ local function config_debuggers()
     local dap = require "dap"
     -- TODO: wait dap-ui for fixing temrinal layout
     -- the "30" of "30vsplit: doesn't work
+    dap.defaults.fallback.force_external_terminal = true
     -- dap.defaults.fallback.terminal_win_cmd = '30vsplit new' -- this will be overrided by dapui
     dap.set_log_level("DEBUG")
 
@@ -64,8 +65,8 @@ local function config_debuggers()
     -- require('dap.ext.vscode').load_launchjs()
     -- require('dap.ext.vscode').load_launchjs(nil, { cppdbg = { 'cpp' } })
     -- config per launage
-    require("user.nvim-dap.di-cpp")
-    -- require("user.nvim-dap.dap-cpp")
+    -- require("user.nvim-dap.di-cpp")
+    require("user.nvim-dap.dap-cpp")
     -- require("user.dap.di-go")
 
     -- require("user.dap.dap-go")
@@ -100,7 +101,6 @@ function M.setup()
     config_dapi_and_sign()
     config_dapui()
     config_debuggers() -- Debugger
-    -- dap_keymap()
     config_dapi_and_sign()
 end
 
