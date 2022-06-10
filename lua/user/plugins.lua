@@ -149,7 +149,7 @@ return require('packer').startup(function()
     use 'theHamsta/nvim-dap-virtual-text'
     use {
         "rcarriga/nvim-dap-ui",
-        tag = "v0.34.0",
+        -- tag = "v0.34.0",
     }
     use "mfussenegger/nvim-dap"
 
