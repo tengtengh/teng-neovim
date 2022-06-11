@@ -1,6 +1,6 @@
 require("user.config.impatient")
 require("user.config.cmp")
-require("user.config.nvim-lspconf")
+-- require("user.config.nvim-lspconf")
 require('user.config.Comment')
 require("user.config.nvim-tree")
 require("user.config.alpha-nvim")

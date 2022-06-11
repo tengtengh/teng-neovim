@@ -41,6 +41,9 @@ return require('packer').startup(function()
         }
     }
 
+    -- lsp-format.nvim
+    -- use "lukas-reineke/lsp-format.nvim"
+
     -- highlight undercursor word
     use "RRethy/vim-illuminate"
 

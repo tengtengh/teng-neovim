@@ -3,7 +3,13 @@
 -- vim.cmd([[packadd nvim-lsp-installer]])
 
 
-local lsp_installer = require("nvim-lsp-installer")
+local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+if not status_ok then
+  vim.notify("nvim-lsp-installer not found!")
+  return
+end
+
+-- local lsp_installer = require("nvim-lsp-installer")
 
 
 lsp_installer.setup({})
@@ -24,6 +30,12 @@ for _, lsp in ipairs(servers) do
     })
 end
 --]]
+
+
+local prettier = {
+    formatCommand = [[prettier --stdin-filepath ${INPUT} ${--tab-width:tab_width}]],
+    formatStdin = true,
+}
 
 
 
