@@ -65,13 +65,15 @@ augroup END
 ]])
 
 
+-- 新建 .clang-format 文件的时候，自动写入indentWidth: 4
 vim.cmd([[
 autocmd BufNewFile .clang-format exec ":call Set_init_clang_format()"
 func Set_init_clang_format()
         call setline(1,"# 缩进宽度")
-        call append(line("."),   "# IndentWidth: 4")
+        call append(line("."),   "IndentWidth: 4")
         call append(line(".")+1, "")
         " autocmd BufNewFile * normal j
         3
 endfunc
 ]])
+

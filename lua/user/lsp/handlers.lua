@@ -106,7 +106,7 @@ local function lsp_keymaps(bufnr)
     -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
     -- 换了lsp-format.nvim
-    -- vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format { async = true }' ]]
+    vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting{}' ]]
 end
 
 -- Use an on_attach function to only map the following keys

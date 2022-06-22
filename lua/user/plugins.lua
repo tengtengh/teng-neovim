@@ -30,6 +30,9 @@ return require('packer').startup(function()
         },
     })
 
+    --  loading vscode snippets
+    use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
     -- lsp support
     use {
         "williamboman/nvim-lsp-installer",
