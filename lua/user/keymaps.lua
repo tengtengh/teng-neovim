@@ -21,11 +21,11 @@ local keymap = vim.api.nvim_set_keymap
 -- keymap("i", "jk", "<ESC>", {})
 
 -- save(w), quit(q, q!), Ctrl+z, :e
-keymap("n", "<leader>w", ":w<CR>", {noremap = true})
-keymap("n", "<leader>q", ":q<CR>", {noremap = true})
-keymap("n", "<leader>q1", ":q!<CR>", {noremap = true})
+-- keymap("n", "<leader>w", ":w<CR>", {noremap = true})
+-- keymap("n", "<leader>q", ":q<CR>", {noremap = true})
+-- keymap("n", "<leader>q1", ":q!<CR>", {noremap = true})
 keymap("n", "<leader>z", "<C-z>", opts)
-keymap("n", "<leader>e", ":e ", {noremap = true})
+-- keymap("n", "<leader>e", ":e ", {noremap = true})
 
 keymap("n", "<leader>v", ":Vex<CR>", opts)
 keymap("n", "<leader>s", ":Sex<CR>", opts)

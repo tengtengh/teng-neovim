@@ -16,9 +16,6 @@ return require('packer').startup(function()
     -- auto completion
     use({
         "hrsh7th/nvim-cmp",
-        -- config = function()
-        --     require("user.config.cmp")
-        -- end,
         requires = {
             { "hrsh7th/cmp-path" },
             { "hrsh7th/cmp-buffer" }, -- Autocompletion plugin
@@ -51,12 +48,7 @@ return require('packer').startup(function()
     use "RRethy/vim-illuminate"
 
     -- comment
-    use {
-        'numToStr/Comment.nvim',
-        -- config = function()
-        --     require('Comment').setup()
-        -- end
-    }
+    use {'numToStr/Comment.nvim',}
 
 
     -- nvim-tree.lua
@@ -65,9 +57,6 @@ return require('packer').startup(function()
         requires = {
             'kyazdani42/nvim-web-devicons', -- optional, for file icon
         },
-        -- config = function()
-        --     require("user.config.nvim-tree")
-        -- end,
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
@@ -77,9 +66,6 @@ return require('packer').startup(function()
     -- 右侧函数名、markdown标题等 文件大纲视图
     use {
         'stevearc/aerial.nvim',
-        -- config = function()
-        --     require('user.config.aerial')
-        -- end
     }
 
     -- clickable buffer line
