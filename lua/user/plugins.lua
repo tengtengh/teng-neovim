@@ -122,17 +122,12 @@ return require('packer').startup(function()
     use "rcarriga/nvim-notify"
 
     -- autopairs
-    use {
-        'windwp/nvim-autopairs',
-    }
+    use 'windwp/nvim-autopairs'
 
     -- Made neovim syntax highlighting more
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
-        -- config = function()
-        --     require("user.config.treesitter")
-        -- end,
     }
 
 
@@ -156,14 +151,7 @@ return require('packer').startup(function()
     --  colorscheme   -- blue-moon
     use "kyazdani42/blue-moon"
     -- colorscheme  -- onedarkpro
-    use {
-        "olimorris/onedarkpro.nvim",
-
-        -- -- event = "BufEnter",
-        -- config = function()
-        --     require "user.themes.onedarkpro"
-        -- end,
-    }
+    use "olimorris/onedarkpro.nvim"
     -- -- A bunch of colorschemes you can try out
     -- use "lunarvim/colorschemes"
     -- colorscheme -- github-nvim-theme
@@ -194,3 +182,6 @@ return require('packer').startup(function()
 
 
 end)
+
+
+
