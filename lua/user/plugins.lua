@@ -97,9 +97,9 @@ return require('packer').startup(function()
     -- 安装插件(markdown图片粘贴)
     use {
         'ferrine/md-img-paste.vim',
-        config = function()
-            require('user.markdown.md-img-paste')
-        end
+        -- config = function()
+        --     require('user.markdown.md-img-paste')
+        -- end
     }
     -- 生成markdown目录的插件
     use 'mzlogin/vim-markdown-toc'
@@ -127,6 +127,7 @@ return require('packer').startup(function()
     -- Made neovim syntax highlighting more
     use {
         'nvim-treesitter/nvim-treesitter',
+        -- branch = "0.5-compat",
         run = ':TSUpdate',
     }
 

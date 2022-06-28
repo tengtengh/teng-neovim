@@ -1,40 +1,24 @@
-
 local status_ok, nvim_treesitter_config = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
-  return
+    return
 end
 
 
 
 nvim_treesitter_config.setup({
+
+
     ensure_installed = {
-    --     "bash",
         "c",
         "cmake",
-    --     "comment",
         "cpp",
-    --     "css",
-    --     "go",
-    --     "html",
         "java",
-    --     "json",
-    --     "jsonc",
-    --     "json5",
-    --     "kotlin",
         "lua",
-    --     "javascript",
         "markdown",
         "python",
-    --     "rust",
-    --     "scss",
-    --     "svelte",
-    --     "tsx",
-    --     "typescript",
-    --     "vue",
         "yaml",
     },
 
-    -- ensure_installed = "all", -- one of "all", "maintained"(这个不行) (parsers with maintainers), or a list of languages
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
@@ -42,15 +26,20 @@ nvim_treesitter_config.setup({
     -- List of parsers to ignore installing (for "all")
     ignore_install = { "javascript" },
 
-    -- auto tag with nvim-ts-autotag
-    autotag = { enable = true },
-    highlight = { enable = true },
-    context_commentstring = {
+    highlight = {
+        -- `false` will disable the whole extension
         enable = true,
-        enable_autocmd = false
-    },
+
+        -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
+        -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
+        -- the name of the parser)
+        -- list of language that will be disabled
+        disable = { "c", "rust" },
+
+        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+        -- Using this option may slow down your editor, and you may see some duplicate highlights.
+        -- Instead of true it can also be a list of languages
+        additional_vim_regex_highlighting = false,
+    }
 })
-
-
-
-

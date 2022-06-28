@@ -18,6 +18,7 @@ require('user.config')
 require('user.lsp')
 require('user.nvim-dap')
 
+require("user.markdown")
 require('user.utils')
 require('user.colorscheme')
 
