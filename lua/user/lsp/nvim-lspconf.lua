@@ -67,3 +67,6 @@ for _, server in ipairs(servers) do
     nvim_lsp[server.name].setup(server_opts)
 
 end
+
+
+

@@ -2,6 +2,7 @@
 	"Print to console": {
 		"prefix": "tengh_edit",
 		"body": [
+			"",
 			"//----------------",
 			"//--Description: $1",
 			"//--Edit by TengHao",
