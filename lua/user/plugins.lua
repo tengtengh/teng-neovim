@@ -48,7 +48,7 @@ return require('packer').startup(function()
     use "RRethy/vim-illuminate"
 
     -- comment
-    use {'numToStr/Comment.nvim',}
+    use { 'numToStr/Comment.nvim', }
 
 
     -- nvim-tree.lua
@@ -171,6 +171,7 @@ return require('packer').startup(function()
     use 'navarasu/onedark.nvim'
     --tokyonight
     use 'folke/tokyonight.nvim'
+    use 'ishan9299/modus-theme-vim'
     -- <<<<<<<<<<<<< colorschemes <<<<<<<<<<<<<
 
     -- telescope
@@ -183,6 +184,3 @@ return require('packer').startup(function()
 
 
 end)
-
-
-

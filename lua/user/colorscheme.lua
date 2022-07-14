@@ -1,8 +1,9 @@
 -- cursor color: #61AFEF
 -- local colorscheme = "catppuccin"
 -- local colorscheme = "doom-one"
+local colorscheme = "modus-operandi"
 -- local colorscheme = "onedarker"
-local colorscheme = "github_light"
+-- local colorscheme = "github_light"
 -- local colorscheme = "tokyonight"
 -- local colorscheme = "onedark"
 
@@ -17,7 +18,6 @@ if not status_ok then
     vim.notify("colorscheme " .. colorscheme .. " not found!")
     return
 end
-
 
 if colorscheme == "github_light" then
     require "user.themes.github-nvim-theme"
