@@ -5,6 +5,7 @@
 -- -- 默认为0，在文件夹名称后面附加一个斜杠
 -- vim.gnvim_tree_add_trailing = 1 -- 0 by default, append a trailing slash to folder names
 
+-- 2022.07.21从全局转移到了setup中，即setup中的group_empty, 默认为true
 -- 默认为0，将仅包含单个文件夹的文件夹压缩到文件树中的一个节点中
 -- vim.g.nvim_tree_group_empty = 1  -- 0 by default, compact folders that only contain a single folder into one node in the file tree
 
@@ -32,6 +33,7 @@
 
 
 
+--[[
 vim.g.nvim_tree_icons = {
     default = "",
     symlink = "",
@@ -56,9 +58,6 @@ vim.g.nvim_tree_icons = {
         symlink_open = "",
     }
 }
-
-
-
 
 -- setup with all defaults
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
@@ -182,8 +181,28 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     },
   },
 } -- END_DEFAULT_OPTS
+--]]
 
 
+-- 2022.07.21 by Tengh
+-- require("nvim-tree").setup()
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  view = {
+    adaptive_size = true,
+    mappings = {
+      list = {
+        { key = "u", action = "dir_up" },
+      },
+    },
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
 
 vim.api.nvim_set_keymap("n", "<leader>n", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
 
