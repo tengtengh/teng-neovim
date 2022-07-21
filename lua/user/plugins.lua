@@ -115,7 +115,7 @@ return require('packer').startup(function()
     -- terminal intergration
     use {
         "akinsho/toggleterm.nvim",
-        tag = 'v1.*',
+        tag = 'v2.*',
     }
 
     -- notify
@@ -169,9 +169,15 @@ return require('packer').startup(function()
     use 'NTBBloodbath/doom-one.nvim'
     -- colorscheme -- onedark.nvim
     use 'navarasu/onedark.nvim'
-    --tokyonight
+    -- tokyonight
     use 'folke/tokyonight.nvim'
+    -- emacs style (light)
     use 'ishan9299/modus-theme-vim'
+    -- onenord
+    use 'rmehri01/onenord.nvim'
+    -- -- nvim-juliana(only dark)
+    -- use 'kaiuri/nvim-juliana' -- 报错，不能用
+    -- use 'GustavoPrietoP/doom-themes.nvim'
     -- <<<<<<<<<<<<< colorschemes <<<<<<<<<<<<<
 
     -- telescope

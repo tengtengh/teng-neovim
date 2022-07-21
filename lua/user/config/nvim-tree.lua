@@ -6,7 +6,7 @@
 -- vim.gnvim_tree_add_trailing = 1 -- 0 by default, append a trailing slash to folder names
 
 -- 默认为0，将仅包含单个文件夹的文件夹压缩到文件树中的一个节点中
-vim.g.nvim_tree_group_empty = 1  -- 0 by default, compact folders that only contain a single folder into one node in the file tree
+-- vim.g.nvim_tree_group_empty = 1  -- 0 by default, compact folders that only contain a single folder into one node in the file tree
 
 -- -- 默认一个空格，用于渲染图标和文件名之间的空格。谨慎使用，如果根据字体设置空字符串，可能会破坏渲染。
 -- vim.g.nvim_tree_icon_padding = ' ' -- one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.

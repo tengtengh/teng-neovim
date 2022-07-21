@@ -9,6 +9,7 @@ if not status_ok then
 end
 
 
+
 doom_one.setup({
 
         cursor_coloring = false,
@@ -37,6 +38,8 @@ doom_one.setup({
             lspsaga = false,
         },
 })
+-- vim.o.background = "light"
+
 
 -- doomone_coloscheme.load()
 
