@@ -7,26 +7,29 @@ end
 
 vim.notify = notify
 notify.setup({
-    background_colour = "Normal",
-    fps = 30,
-    icons = {
-        DEBUG = "",
-        ERROR = "",
-        INFO = "",
-        TRACE = "✎",
-        WARN = ""
-    },
+    -- background_colour = "#3A48D5", -- Tengh edit
+    background_colour = "#000000", -- Tengh edit
 
-    level = "info",
 
-    -- Minimum width for notification windows
-    minimum_width = 50,
+    -- fps = 30,
+    -- icons = {
+    --     DEBUG = "",
+    --     ERROR = "",
+    --     INFO = "",
+    --     TRACE = "✎",
+    --     WARN = ""
+    -- },
 
-    -- Render function for notifications. See notify-render()
-    render = "default",
-    -- Animation style (see below for details)
-    stages = "fade_in_slide_out",
+    -- level = "info",
 
-    -- Default timeout for notifications
-    timeout = 5000
+    -- -- Minimum width for notification windows
+    -- minimum_width = 50,
+
+    -- -- Render function for notifications. See notify-render()
+    -- render = "default",
+    -- -- Animation style (see below for details)
+    -- stages = "fade_in_slide_out",
+
+    -- -- Default timeout for notifications
+    -- timeout = 5000
 })

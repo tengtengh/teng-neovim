@@ -196,11 +196,18 @@ return require('packer').startup(function()
     -- 打开文件自动回到上次编辑的位置
     use 'ethanholz/nvim-lastplace'
 
+    -- TODO:
+    -- HACK:
+    -- NOTE:
+    -- FIX:
+    -- WARNING:
     -- todo-comments
     use {
         "folke/todo-comments.nvim",
         -- requires = "nvim-lua/plenary.nvim",
     }
+
+    use "folke/trouble.nvim"
 
 
 
