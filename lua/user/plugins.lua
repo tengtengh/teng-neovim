@@ -43,7 +43,7 @@ return require('packer').startup(function()
 
     -- lsp-signature
     use {
-      "ray-x/lsp_signature.nvim",
+        "ray-x/lsp_signature.nvim",
     }
 
 
@@ -193,6 +193,13 @@ return require('packer').startup(function()
 
     use "nvim-pack/nvim-spectre"
 
+    -- 打开文件自动回到上次编辑的位置
+    use {
+        'ethanholz/nvim-lastplace',
+        config = function()
+            require('nvim-lastplace').setup{}
+        end
+    }
 
 
 

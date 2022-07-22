@@ -42,17 +42,19 @@ vim.o.smartcase = true
 vim.g.mapleader = ';'
 
 
--- 重新打开文档时光标回到文档关闭前的位置 -- 参考的代码随想录作者的PowerVim
-vim.cmd([[
 
-if has("autocmd")
- autocmd BufReadPost *
- \ if line("'\"") > 0 && line ("'\"") <= line("$") |
- \ exe "normal g'\"" |
-\ endif
-endif
+-- -- 重新打开文档时光标回到文档关闭前的位置 -- 参考的代码随想录作者的PowerVim
+-- vim.cmd([[
 
-]])
+-- if has("autocmd")
+--  autocmd BufReadPost *
+--  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+--  \ exe "normal g'\"" |
+-- \ endif
+-- endif
+
+-- ]])
+
 
 -- vim.cmd([[ 
 --     if index(['lua'], &filetype) != -1
