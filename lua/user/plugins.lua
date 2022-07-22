@@ -194,12 +194,14 @@ return require('packer').startup(function()
     use "nvim-pack/nvim-spectre"
 
     -- 打开文件自动回到上次编辑的位置
+    use 'ethanholz/nvim-lastplace'
+
+    -- todo-comments
     use {
-        'ethanholz/nvim-lastplace',
-        config = function()
-            require('nvim-lastplace').setup{}
-        end
+        "folke/todo-comments.nvim",
+        -- requires = "nvim-lua/plenary.nvim",
     }
+
 
 
 

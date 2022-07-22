@@ -68,7 +68,7 @@ vim.g.mapleader = ';'
 vim.cmd([[
 fun SetNvimTreeNorelativenumber()
     if  index(['NvimTree'], &filetype) != -1
-        set nornu
+       """ set nornu
     else 
         set rnu
     endif
