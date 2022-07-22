@@ -23,9 +23,9 @@ vim.o.encoding = "utf-8"
 --中文编码
 vim.o.fileencodings = "utf-8, gb2312, gbk, gb18030"
 
-vim.o.ruler = true
 
---Turn on the mouse function
+
+
 vim.o.mouse = 'a'
 
 --  忽略大小写
