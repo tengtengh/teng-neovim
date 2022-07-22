@@ -29,10 +29,11 @@ keymap("n", "<leader>e", ":e ", {noremap = true})
 
 keymap("n", "<leader>v", ":Vex<CR>", opts)
 keymap("n", "<leader>s", ":Sex<CR>", opts)
-keymap("n", "<leader>h", "<C-w>h", opts)
+-- keymap("n", "<leader>h", "<C-w>h", opts)
+keymap("n", "<leader>h", "<C-w>h", {noremap = true})
 keymap("n", "<leader>j", "<C-w>j", opts)
 keymap("n", "<leader>k", "<C-w>k", opts)
-keymap("n", "<leader>l", "<C-w>l", opts)
+keymap("n", "<leader>l", "<C-w>l", {noremap = true})
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)

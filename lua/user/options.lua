@@ -54,15 +54,31 @@ endif
 
 ]])
 
+-- vim.cmd([[ 
+--     if index(['lua'], &filetype) != -1
+--         echo "lua"
+--     endif
+-- ]])
+
 -- insert 模式下关闭相对行号，离开insert模式时打开相对行号
 -- 参考 William Lin的vim配置, https://github.com/tmwilliamlin168/CP-YouTube/blob/master/.vimrc
+-- 2022-07-22 by tengh: 对于NvimTree文件类型，永远不显示行号
 vim.cmd([[
+fun SetNvimTreeNorelativenumber()
+    if  index(['NvimTree'], &filetype) != -1
+        set nornu
+    else 
+        set rnu
+    endif
+endfun
+
 augroup numbertoggle
     autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set rnu
+    autocmd BufEnter,FocusGained,InsertLeave * call SetNvimTreeNorelativenumber()
     autocmd BufLeave,FocusLost,InsertEnter * set nornu
 augroup END
 ]])
+
 
 
 -- 新建 .clang-format 文件的时候，自动写入indentWidth: 4

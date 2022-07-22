@@ -41,6 +41,12 @@ return require('packer').startup(function()
         }
     }
 
+    -- lsp-signature
+    use {
+      "ray-x/lsp_signature.nvim",
+    }
+
+
     -- lsp-format.nvim
     -- use "lukas-reineke/lsp-format.nvim"
 
@@ -185,6 +191,7 @@ return require('packer').startup(function()
     -- -- media file preview extension for telescope
     -- use("nvim-telescope/telescope-media-files.nvim")
 
+    use "nvim-pack/nvim-spectre"
 
 
 

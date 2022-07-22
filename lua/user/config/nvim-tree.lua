@@ -189,7 +189,9 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
-    adaptive_size = true,
+    -- adaptive_size = true,
+    number = false;
+    relativenumber = false;
     mappings = {
       list = {
         { key = "u", action = "dir_up" },
@@ -198,6 +200,7 @@ require("nvim-tree").setup({
   },
   renderer = {
     group_empty = true,
+    full_name = true
   },
   filters = {
     dotfiles = true,
