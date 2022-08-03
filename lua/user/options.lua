@@ -56,7 +56,7 @@ vim.g.mapleader = ';'
 -- ]])
 
 
--- vim.cmd([[ 
+-- vim.cmd([[
 --     if index(['lua'], &filetype) != -1
 --         echo "lua"
 --     endif
@@ -90,8 +90,20 @@ func Set_init_clang_format()
         call setline(1,"# 缩进宽度")
         call append(line("."),   "IndentWidth: 4")
         call append(line(".")+1, "")
+        call append(line(".")+2, "#如果为真（true），这条语句：“if(a)return;”将被放在同一行")
+        call append(line(".")+3, "AllowShortIfStatementsOnASingleLine: true")
+        call append(line(".")+4, "")
+        call append(line(".")+5, "#保持连续空行的最大数量")
+        call append(line(".")+6, "MaxEmptyLinesToKeep: 3")
+        call append(line(".")+7, "")
         " autocmd BufNewFile * normal j
         3
 endfunc
 ]])
+
+
+vim.cmd([[ 
+autocmd BufRead,BufNewFile *.launch setfiletype xml
+]])
+
 
