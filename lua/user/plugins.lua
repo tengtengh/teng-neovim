@@ -116,6 +116,8 @@ return require('packer').startup(function()
     --         require('user.markdown.headlines')
     --     end,
     -- }
+
+    use 'dhruvasagar/vim-table-mode'
     -- <<<<<<<<<<<< Markdown <<<<<<<<<<<<
 
     -- terminal intergration
@@ -191,6 +193,7 @@ return require('packer').startup(function()
     -- -- media file preview extension for telescope
     -- use("nvim-telescope/telescope-media-files.nvim")
 
+    -- A search panel for neovim.
     use "nvim-pack/nvim-spectre"
 
     -- 打开文件自动回到上次编辑的位置
