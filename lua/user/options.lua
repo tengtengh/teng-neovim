@@ -42,6 +42,9 @@ vim.o.smartcase = true
 vim.g.mapleader = ';'
 
 
+-- popup menu height 弹出框的最大高度
+vim.o.pumheight=10
+
 
 -- -- 重新打开文档时光标回到文档关闭前的位置 -- 参考的代码随想录作者的PowerVim
 -- vim.cmd([[
