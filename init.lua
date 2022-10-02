@@ -22,6 +22,16 @@ require("user.markdown")
 require('user.utils')
 require('user.colorscheme')
 
+-- vim.cmd([[
+-- " lua require("notify")("My super important message")
+-- if(has("win32") || has("win64") || has("win95") || has("win16"))
+--     " set background=dark
+--     " set clipboard=unnamedplus
+-- ]])
+
+-- vim.cmd([[ 
+-- set guicursor=n-v-c:hor50
+-- ]])
 
 
 --                      ___           ___           ___           ___
