@@ -179,13 +179,20 @@ return require('packer').startup(function()
     use 'navarasu/onedark.nvim'
     -- tokyonight
     use 'folke/tokyonight.nvim'
-    -- emacs style (light)
+    -- colorscheme -- emacs style (light)
     use 'ishan9299/modus-theme-vim'
-    -- onenord
+    -- colorscheme -- onenord
     use 'rmehri01/onenord.nvim'
     -- -- nvim-juliana(only dark)
     -- use 'kaiuri/nvim-juliana' -- 报错，不能用
     -- use 'GustavoPrietoP/doom-themes.nvim'
+    -- colorscheme -- monokai styles
+    use 'tanvirtin/monokai.nvim'
+    use "cpea2506/one_monokai.nvim"
+    -- use "NNNiv/monokai-palenight.nvim"
+    -- use 'ray-x/starry.nvim'
+    -- colorscheme -- dracula
+    use 'Mofiqul/dracula.nvim'
     -- <<<<<<<<<<<<< colorschemes <<<<<<<<<<<<<
 
     -- telescope

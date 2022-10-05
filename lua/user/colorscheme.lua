@@ -1,7 +1,7 @@
 -- cursor color: #61AFEF
 -- local colorscheme = "catppuccin"
 -- local colorscheme = "doom-one"
--- -- local colorscheme = "modus-operandi" -- emacs
+-- local colorscheme = "modus-operandi" -- emacs
 -- local colorscheme = "onedarker"
 local colorscheme = "github_light"
 -- local colorscheme = "tokyonight"
