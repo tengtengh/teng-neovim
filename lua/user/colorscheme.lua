@@ -3,9 +3,9 @@
 -- local colorscheme = "doom-one"
 -- local colorscheme = "modus-operandi" -- emacs
 -- local colorscheme = "onedarker"
-local colorscheme = "github_light"
+-- local colorscheme = "github_light"
 -- local colorscheme = "tokyonight"
--- local colorscheme = "onedark"
+local colorscheme = "onedark"
 
 -- local colorscheme = "onedarkpro"
 
