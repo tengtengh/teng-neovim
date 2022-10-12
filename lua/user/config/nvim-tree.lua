@@ -1,4 +1,3 @@
-
 -- -- 默认情况下为0，将为 git 属性启用文件突出显示（可以在没有图标的情况下使用）
 -- vim.g.nvim_tree_git_hl = 1 -- 0 by default, will enable file highlight for git attributes (can be used without the icons).
 
@@ -185,32 +184,27 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
 
 
 -- 2022.07.21 by Tengh
--- require("nvim-tree").setup()
 require("nvim-tree").setup({
-  sort_by = "case_sensitive",
-  view = {
-    -- adaptive_size = true,
-    number = false;
-    relativenumber = false;
-    mappings = {
-      list = {
-        { key = "u", action = "dir_up" },
-      },
+    sort_by = "case_sensitive",
+    view = {
+        -- adaptive_size = true,
+        number = false,
+        relativenumber = false,
+        mappings = {
+            list = {
+                { key = "u", action = "dir_up" },
+            },
+        },
     },
-  },
-  renderer = {
-    group_empty = true,
-    full_name = true
-  },
-  filters = {
-    dotfiles = true,
-  },
+    renderer = {
+        group_empty = true,
+        full_name = true
+    },
+    filters = {
+        -- Do not show dotfiles(true),
+        -- Toggle via the `toggle_dotfiles` action, default mapping `H`.
+        dotfiles = true,
+    },
 })
 
-vim.api.nvim_set_keymap("n", "<leader>n", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
-
-
-
-
-
-
+vim.api.nvim_set_keymap("n", "<leader>n", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
