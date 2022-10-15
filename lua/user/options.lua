@@ -2,16 +2,17 @@
 vim.o.number = true
 
 -- tab == 4 space
+vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
-vim.o.expandtab = 4
 vim.o.smartindent = true
 
 -- is necessary
 vim.o.termguicolors = true
 
 -- hightlight cur line
-vim.o.cursorline = true
+-- 2022.10.13 commit
+-- vim.o.cursorline = true
 
 -- set nobackup
 vim.o.backup = false

@@ -1,4 +1,3 @@
-
 local opts = { noremap = true, silent = true }
 -- local term_opts = { silent = true }
 
@@ -21,19 +20,19 @@ local keymap = vim.api.nvim_set_keymap
 -- keymap("i", "jk", "<ESC>", {})
 
 -- save(w), quit(q, q!), Ctrl+z, :e
-keymap("n", "<leader>w", ":w<CR>", {noremap = true})
-keymap("n", "<leader>q", ":q<CR>", {noremap = true})
-keymap("n", "<leader>q1", ":q!<CR>", {noremap = true})
+keymap("n", "<leader>w", ":w<CR>", { noremap = true })
+keymap("n", "<leader>q", ":q<CR>", { noremap = true })
+keymap("n", "<leader>q1", ":q!<CR>", { noremap = true })
 keymap("n", "<leader>z", "<C-z>", opts)
-keymap("n", "<leader>e", ":e ", {noremap = true})
+keymap("n", "<leader>e", ":e ", { noremap = true })
 
 keymap("n", "<leader>v", ":Vex<CR>", opts)
 keymap("n", "<leader>s", ":Sex<CR>", opts)
 -- keymap("n", "<leader>h", "<C-w>h", opts)
-keymap("n", "<leader>h", "<C-w>h", {noremap = true})
+keymap("n", "<leader>h", "<C-w>h", { noremap = true })
 keymap("n", "<leader>j", "<C-w>j", opts)
 keymap("n", "<leader>k", "<C-w>k", opts)
-keymap("n", "<leader>l", "<C-w>l", {noremap = true})
+keymap("n", "<leader>l", "<C-w>l", { noremap = true })
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -63,7 +62,3 @@ keymap("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opts)
 keymap("n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", opts)
 keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
 keymap("n", "dr", "<cmd>lua require 'dapui'.toggle()<cr>", opts)
-
-
-
-
