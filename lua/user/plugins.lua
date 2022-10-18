@@ -53,6 +53,24 @@ return require('packer').startup(function()
     -- highlight undercursor word
     use "RRethy/vim-illuminate"
 
+
+    -- lsp ui
+    -- TODO: 有空配置一下
+    -- use { 'kkharji/lspsaga.nvim' }
+    use({
+        "glepnir/lspsaga.nvim",
+        branch = "main",
+        -- config = function()
+        --     local saga = require("lspsaga")
+
+        --     saga.init_lsp_saga({
+        --         -- your configuration
+        --     })
+        -- end,
+    })
+
+
+
     -- comment
     use { 'numToStr/Comment.nvim', }
 
@@ -102,7 +120,8 @@ return require('packer').startup(function()
     -- vim.cmd([[  execute 'call mkdp#util#install()'  ]])
     -- 安装插件(markdown图片粘贴)
     use {
-        'ferrine/md-img-paste.vim',
+        'tengtengh/md-img-paste.vim',
+        branch = "WSL2"
         -- config = function()
         --     require('user.markdown.md-img-paste')
         -- end
