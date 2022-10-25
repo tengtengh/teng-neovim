@@ -16,6 +16,7 @@ github_nvim_theme.setup({
     -- theme_style = "dark",            -- github_dark
 
     -- comment_style = "italic",
+    -- comment_style = "NONE",
     -- keyword_style = "NONE",
     -- function_style = "NONE",
     -- variable_style = "NONE",
