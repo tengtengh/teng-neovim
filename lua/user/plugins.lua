@@ -212,6 +212,9 @@ return require('packer').startup(function()
     -- use 'ray-x/starry.nvim'
     -- colorscheme -- dracula
     use 'Mofiqul/dracula.nvim'
+    use 'p00f/alabaster.nvim'
+    -- use 'JaMo42/alabaster.vim'
+    -- use 'stephencottontail/alabaster.vim'
     -- <<<<<<<<<<<<< colorschemes <<<<<<<<<<<<<
 
     -- telescope
