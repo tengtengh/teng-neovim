@@ -238,6 +238,11 @@ return require('packer').startup(function()
 
     use "folke/trouble.nvim"
 
+    -- vim-translate
+    -- use 'voldikss/vim-translator'
+    use {'uga-rosa/translate.nvim'}
+
+    use 'ianva/vim-youdao-translater'
 
 
 

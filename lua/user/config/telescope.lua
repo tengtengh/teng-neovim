@@ -1,14 +1,14 @@
 
 
 
--- local status_ok, telescope = pcall(require, "telescope")
--- if not status_ok then
---   vim.notify("telescope not found!")
---   return
--- end
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+  vim.notify("telescope not found!")
+  return
+end
 
 
-local telescope = require("telescope")
+-- local telescope = require("telescope")
 
 
 telescope.setup({
