@@ -137,6 +137,15 @@ return require('packer').startup(function()
     -- }
 
     use 'dhruvasagar/vim-table-mode'
+
+    -- -- markdown_toc
+    -- use {
+    --     'Addisonbean/loclist-toc-nvim',
+    --     config = function()
+    --         require('loclist-toc-nvim').setup{}
+    --     end,
+    -- }
+
     -- <<<<<<<<<<<< Markdown <<<<<<<<<<<<
 
     -- terminal intergration
@@ -207,7 +216,7 @@ return require('packer').startup(function()
     -- use 'GustavoPrietoP/doom-themes.nvim'
     -- colorscheme -- monokai styles
     use 'tanvirtin/monokai.nvim'
-    use "cpea2506/one_monokai.nvim"
+    use "tengtengh/one_monokai.nvim" -- TODO: 禁用斜体
     -- use "NNNiv/monokai-palenight.nvim"
     -- use 'ray-x/starry.nvim'
     -- colorscheme -- dracula
@@ -246,6 +255,7 @@ return require('packer').startup(function()
     use {'uga-rosa/translate.nvim'}
 
     use 'ianva/vim-youdao-translater'
+
 
 
 

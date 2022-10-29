@@ -7,9 +7,9 @@ end
 
 
 translate.setup({
-    default = {
-        command = "translate_shell",
-    },
+    -- default = {
+    --     command = "translate_shell",
+    -- },
     preset = {
         output = {
             split = {

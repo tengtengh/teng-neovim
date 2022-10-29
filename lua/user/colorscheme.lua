@@ -1,12 +1,12 @@
 -- cursor color: #61AFEF
 -- local colorscheme = "catppuccin"
--- local colorscheme = "doom-one"
-local colorscheme = "one_monokai"
+local colorscheme = "doom-one"
+-- local colorscheme = "one_monokai"
 -- local colorscheme = "modus-operandi" -- emacs
 -- local colorscheme = "onedarker"
 -- local colorscheme = "github_light"
 -- local colorscheme = "tokyonight"
--- local colorscheme = "onedark"
+-- local colorscheme = "onedarkpro"
 -- local colorscheme = "desert"
 -- local colorscheme = "default"
 -- local colorscheme = "vscode"
@@ -33,8 +33,10 @@ elseif colorscheme == "onedark" then
     require "user.themes.onedark"
 elseif colorscheme == "catppuccin" then
     require "user.themes.catppuccin"
-elseif colorscheme == "doom-one" then
-    require "user.themes.doom-one"
+-- elseif colorscheme == "doom-one" then
+--     require "user.themes.doom-one"
+elseif colorscheme == "one_monokai" then
+    require "user.themes.one-monokai"
 end
 
 
