@@ -4,8 +4,8 @@
 -- local colorscheme = "one_monokai"
 -- local colorscheme = "modus-operandi" -- emacs
 -- local colorscheme = "onedarker"
--- local colorscheme = "github_light"
-local colorscheme = "tokyonight"
+local colorscheme = "github_light"
+-- local colorscheme = "tokyonight"
 -- local colorscheme = "onedarkpro"
 -- local colorscheme = "desert"
 -- local colorscheme = "default"
@@ -26,7 +26,7 @@ if not status_ok then
 end
 
 if colorscheme == "github_light" then
-    require "user.themes.github-nvim-theme"
+    require "user.themes.github_light-nvim-theme"
 elseif colorscheme == "tokyonight" then
     require "user.themes.tokyonight"
 elseif colorscheme == "onedark" then
