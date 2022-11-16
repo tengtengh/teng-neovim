@@ -199,6 +199,7 @@ return require('packer').startup(function()
     -- colorscheme -- catppuccin
     use({
         "catppuccin/nvim",
+        -- tag = 'v0.2.5',
         as = "catppuccin"
     })
     -- colorscheme  -- doom-one
@@ -224,6 +225,15 @@ return require('packer').startup(function()
     use 'p00f/alabaster.nvim'
     -- use 'JaMo42/alabaster.vim'
     -- use 'stephencottontail/alabaster.vim'
+    use "rafamadriz/neon"
+    -- use 'marko-cerovac/material.nvim'
+    use "tomasiser/vim-code-dark"
+    -- use "christianchiarulli/nvcode-color-schemes.vim"
+    use "lewpoly/sherbet.nvim"
+    use({
+        'glepnir/zephyr-nvim',
+        requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
+    })
     -- <<<<<<<<<<<<< colorschemes <<<<<<<<<<<<<
 
     -- telescope
@@ -252,7 +262,7 @@ return require('packer').startup(function()
 
     -- vim-translate
     -- use 'voldikss/vim-translator'
-    use {'uga-rosa/translate.nvim'}
+    use { 'uga-rosa/translate.nvim' }
 
     use 'ianva/vim-youdao-translater'
 

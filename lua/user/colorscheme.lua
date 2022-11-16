@@ -1,10 +1,12 @@
 -- cursor color: #61AFEF
 -- local colorscheme = "catppuccin"
+-- local colorscheme = "nightfox"
 -- local colorscheme = "doom-one"
 -- local colorscheme = "one_monokai"
 -- local colorscheme = "modus-operandi" -- emacs
 -- local colorscheme = "onedarker"
-local colorscheme = "github_light"
+-- local colorscheme = "onedark"
+-- local colorscheme = "github_light"
 -- local colorscheme = "tokyonight"
 -- local colorscheme = "onedarkpro"
 -- local colorscheme = "desert"
@@ -12,6 +14,9 @@ local colorscheme = "github_light"
 -- local colorscheme = "vscode"
 -- local colorscheme = "torte"
 -- local colorscheme = "ron"
+-- local colorscheme = "slate"
+-- local colorscheme = "dracula"
+local colorscheme = "codedark"
 
 -- local colorscheme = "onedarkpro"
 
@@ -21,7 +26,7 @@ local colorscheme = "github_light"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
-    vim.notify("colorscheme " .. colorscheme .. " not found!")
+    vim.notify("colorscheme " .. colorscheme .. " not found!!")
     return
 end
 
