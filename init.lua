@@ -22,8 +22,6 @@ require("user.markdown")
 require('user.utils')
 require('user.colorscheme')
 
-vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
-vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
 
 
 -- vim.cmd([[

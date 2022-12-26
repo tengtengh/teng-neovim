@@ -112,14 +112,11 @@ return require('packer').startup(function()
 
     -- >>>>>>>>>>> Markdown >>>>>>>>>>>>
     -- markdown-preview
-    use {
-        "iamcco/markdown-preview.nvim",
-        run = ":call mkdp#util#install()",
-    }
-
-    -- markdown preview
-    use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
-
+    -- use {
+    --     "iamcco/markdown-preview.nvim",
+    --     run = ":call mkdp#util#install()",
+    -- }
+    use 'davidgranstrom/nvim-markdown-preview'
 
     -- 或者 手动执行 :call mkdp#util#install()
     -- vim.cmd([[  execute 'call mkdp#util#install()'  ]])
