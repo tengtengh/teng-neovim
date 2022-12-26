@@ -22,6 +22,10 @@ require("user.markdown")
 require('user.utils')
 require('user.colorscheme')
 
+vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
+vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
+
+
 -- vim.cmd([[
 -- " lua require("notify")("My super important message")
 -- if(has("win32") || has("win64") || has("win95") || has("win16"))

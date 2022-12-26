@@ -116,6 +116,11 @@ return require('packer').startup(function()
         "iamcco/markdown-preview.nvim",
         run = ":call mkdp#util#install()",
     }
+
+    -- markdown preview
+    use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
+
+
     -- 或者 手动执行 :call mkdp#util#install()
     -- vim.cmd([[  execute 'call mkdp#util#install()'  ]])
     -- 安装插件(markdown图片粘贴)
