@@ -3,6 +3,7 @@
 -- local colorscheme = "nightfox"
 -- local colorscheme = "doom-one"
 -- local colorscheme = "one_monokai"
+-- local colorscheme = "material"
 -- local colorscheme = "modus-operandi" -- emacs
 -- local colorscheme = "onedarker"
 -- local colorscheme = "onedark"

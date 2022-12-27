@@ -47,6 +47,10 @@
 
 
 
+
+
+
+
 -- doom_one.setup({
 
 --         cursor_coloring = false,

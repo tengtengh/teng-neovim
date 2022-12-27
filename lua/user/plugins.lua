@@ -112,14 +112,17 @@ return require('packer').startup(function()
 
     -- >>>>>>>>>>> Markdown >>>>>>>>>>>>
     -- markdown-preview
-    -- use {
-    --     "iamcco/markdown-preview.nvim",
-    --     run = ":call mkdp#util#install()",
-    -- }
-    use 'davidgranstrom/nvim-markdown-preview'
-
+    use {
+        "iamcco/markdown-preview.nvim",
+        run = ":call mkdp#util#install()",
+    }
     -- 或者 手动执行 :call mkdp#util#install()
     -- vim.cmd([[  execute 'call mkdp#util#install()'  ]])
+   
+    -- use 'davidgranstrom/nvim-markdown-preview'
+    -- use 'jbyuki/md-prev.nvim'
+    use {"ellisonleao/glow.nvim"}
+
     -- 安装插件(markdown图片粘贴)
     use {
         'tengtengh/md-img-paste.vim',
@@ -166,6 +169,7 @@ return require('packer').startup(function()
     use {
         'nvim-treesitter/nvim-treesitter',
         -- branch = "0.5-compat",
+        -- tag = "v0.8.0",
         run = ':TSUpdate',
     }
 
@@ -206,6 +210,7 @@ return require('packer').startup(function()
     })
     -- colorscheme  -- doom-one
     use 'NTBBloodbath/doom-one.nvim'
+
     -- colorscheme -- onedark.nvim
     use 'navarasu/onedark.nvim'
     -- tokyonight
@@ -228,14 +233,17 @@ return require('packer').startup(function()
     -- use 'JaMo42/alabaster.vim'
     -- use 'stephencottontail/alabaster.vim'
     use "rafamadriz/neon"
-    -- use 'marko-cerovac/material.nvim'
+    use 'marko-cerovac/material.nvim'
     use "tomasiser/vim-code-dark"
     -- use "christianchiarulli/nvcode-color-schemes.vim"
     use "lewpoly/sherbet.nvim"
     use({
         'glepnir/zephyr-nvim',
-        requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
+        -- requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
     })
+    use 'jacoborus/tender.vim'
+    -- use { 'bluz71/vim-moonfly-colors', branch = 'cterm-compat' }
+    use 'christianchiarulli/nvcode-color-schemes.vim'
     -- <<<<<<<<<<<<< colorschemes <<<<<<<<<<<<<
 
     -- telescope
