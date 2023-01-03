@@ -111,7 +111,7 @@ autocmd BufNewFile a.cpp exec ":call Set_init_a_cpp()"
 func Set_init_a_cpp()
         call setline(1,"/**")
         call append(line("."),   " * Author: Tengh    ")
-        call append(line(".")+1, " * Created Time: ".strftime("%y.%m.%d %H:%M:%S(%A)"))
+        call append(line(".")+1, " * Created Time: ".strftime("%y.%m.%d %H:%M:%S (%A)"))
         call append(line(".")+2, "**/")
         call append(line(".")+3, "")
         call append(line(".")+4, "#include <bits/stdc++.h>")
