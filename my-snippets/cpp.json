@@ -10,6 +10,32 @@
 			"$2"
 		],
 		"description": "Edited by Teng Hao + time"
+	},
+
+
+    "Print to console": {
+		"prefix": "cpp_template",
+		"body": [
+			"",
+            "#include <bits/stdc++.h>",
+            "",
+            "using namespace std;",
+            "",
+            "typedef long long ll;",
+            "",
+            "#define m_pi 3.14159255358979323846",
+            "",
+            "#define MXN 1000010",
+            "",
+            "int main(int argc, char **argv) {",
+            "    ios::sync_with_stdio(0);",
+            "    cin.tie(0);",
+            "",
+            "    return 0;",
+            "}"
+
+		],
+		"description": "cpp template"
 	}
 }
 

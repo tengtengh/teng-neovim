@@ -101,11 +101,49 @@ func Set_init_clang_format()
         call append(line(".")+6, "MaxEmptyLinesToKeep: 3")
         call append(line(".")+7, "")
         " autocmd BufNewFile * normal j
-        3
+        9
 endfunc
 ]])
 
 
+vim.cmd([[ 
+autocmd BufNewFile a.cpp exec ":call Set_init_a_cpp()"
+func Set_init_a_cpp()
+        call setline(1,"/**")
+        call append(line("."),   " * Author: Tengh    ")
+        call append(line(".")+1, " * Created Time: ".strftime("%y.%m.%d %H:%M:%S(%A)"))
+        call append(line(".")+2, "**/")
+        call append(line(".")+3, "")
+        call append(line(".")+4, "#include <bits/stdc++.h>")
+        call append(line(".")+5, "")
+        call append(line(".")+6, "using namespace std;")
+        call append(line(".")+7, "")
+        call append(line(".")+8, "typedef long long ll;")
+        call append(line(".")+9, "")
+        call append(line(".")+10, "#define m_pi 3.14159255358979323846")
+        call append(line(".")+11, "")
+        call append(line(".")+12, "int main(int argc, char **argv) {")
+        call append(line(".")+13, "    ios::sync_with_stdio(0);")
+        call append(line(".")+14, "    cin.tie(0);")
+        call append(line(".")+15, "")
+        call append(line(".")+16, "")
+        call append(line(".")+17, "    return 0;")
+        call append(line(".")+18, "}")
+        call append(line(".")+19, "")
+        " autocmd BufNewFile * normal j
+        17
+endfunc
+
+
+
+]])
+
+
+
+
+
+
+-- 针对roslaunch使用xml的注释和补全
 vim.cmd([[ 
 autocmd BufRead,BufNewFile *.launch setfiletype xml
 ]])

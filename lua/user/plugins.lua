@@ -81,7 +81,8 @@ return require('packer').startup(function()
         requires = {
             'kyazdani42/nvim-web-devicons', -- optional, for file icon
         },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+        branch = "1831-test-skipping-executable-check", -- 这个版本可以比较Wsl中打开nvim-tree卡住的问题
+        -- tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
     -- welcome page
