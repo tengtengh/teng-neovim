@@ -167,12 +167,12 @@ return require('packer').startup(function()
     use 'windwp/nvim-autopairs'
 
     -- Made neovim syntax highlighting more
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        -- branch = "0.5-compat",
-        -- tag = "v0.8.0",
-        run = ':TSUpdate',
-    }
+    -- use {
+    --     'nvim-treesitter/nvim-treesitter',
+    --     -- branch = "0.5-compat",
+    --     -- tag = "v0.8.0",
+    --     run = ':TSUpdate',
+    -- }
 
 
     -- Debugger
@@ -188,6 +188,10 @@ return require('packer').startup(function()
     use "lukas-reineke/indent-blankline.nvim"
 
     -- >>>>>>>>>>>>> colorschemes >>>>>>>>>>>>>
+    -- 
+    -- -- -- A bunch of colorschemes you can try out
+    -- -- use "lunarvim/colorschemes"
+    --
     -- colorscheme -- EdenEast/nightfox.nvim
     use "EdenEast/nightfox.nvim"
     -- colorscheme -- vscode.nvim
@@ -196,12 +200,9 @@ return require('packer').startup(function()
     use "kyazdani42/blue-moon"
     -- colorscheme  -- onedarkpro
     use "olimorris/onedarkpro.nvim"
-    -- -- A bunch of colorschemes you can try out
-    -- use "lunarvim/colorschemes"
     -- colorscheme -- github-nvim-theme
     use {
         "projekt0n/github-nvim-theme",
-        -- tag = "v0.0.4",  -- 敲代码的脱发水哥加了这个，我不能加，否则nvim-treesitter在lua文件报错(一片红)
     }
     -- colorscheme -- catppuccin
     use({
@@ -220,30 +221,20 @@ return require('packer').startup(function()
     use 'ishan9299/modus-theme-vim'
     -- colorscheme -- onenord
     use 'rmehri01/onenord.nvim'
-    -- -- nvim-juliana(only dark)
-    -- use 'kaiuri/nvim-juliana' -- 报错，不能用
-    -- use 'GustavoPrietoP/doom-themes.nvim'
     -- colorscheme -- monokai styles
     use 'tanvirtin/monokai.nvim'
     use "tengtengh/one_monokai.nvim" -- TODO: 禁用斜体
-    -- use "NNNiv/monokai-palenight.nvim"
-    -- use 'ray-x/starry.nvim'
     -- colorscheme -- dracula
     use 'Mofiqul/dracula.nvim'
     use 'p00f/alabaster.nvim'
-    -- use 'JaMo42/alabaster.vim'
-    -- use 'stephencottontail/alabaster.vim'
     use "rafamadriz/neon"
     use 'marko-cerovac/material.nvim'
     use "tomasiser/vim-code-dark"
-    -- use "christianchiarulli/nvcode-color-schemes.vim"
     use "lewpoly/sherbet.nvim"
     use({
         'glepnir/zephyr-nvim',
-        -- requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
     })
     use 'jacoborus/tender.vim'
-    -- use { 'bluz71/vim-moonfly-colors', branch = 'cterm-compat' }
     use 'christianchiarulli/nvcode-color-schemes.vim'
     -- <<<<<<<<<<<<< colorschemes <<<<<<<<<<<<<
 
