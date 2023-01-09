@@ -42,3 +42,7 @@ require("user.config.trouble")
 require("user.config.vim-translator")
 require("user.config.vim-youdao-translater")
 require("user.config.translate")
+require("user.config.illuminate")
+
+
+
