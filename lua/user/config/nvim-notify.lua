@@ -33,3 +33,7 @@ notify.setup({
     -- -- Default timeout for notifications
     -- timeout = 5000
 })
+
+require("telescope").load_extension("notify")
+
+
