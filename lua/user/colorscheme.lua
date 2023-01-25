@@ -44,7 +44,7 @@ local is_linux = not is_wsl and not is_mac
 --     colorscheme = "codedark"
 -- end
 
-colorscheme = "codedark"
+colorscheme = "doom-one"
 
 
 

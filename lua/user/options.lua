@@ -106,39 +106,54 @@ endfunc
 ]])
 
 
-vim.cmd([[ 
+vim.cmd([[
 autocmd BufNewFile a.cpp exec ":call Set_init_a_cpp()"
 func Set_init_a_cpp()
         call setline(1,"/**")
-        call append(line("."),   " * Author: Tengh")
-        call append(line(".")+1, " * Created Time: ".strftime("%y.%m.%d %H:%M:%S (%A)"))
-        call append(line(".")+2, "**/")
-        call append(line(".")+3, "")
-        call append(line(".")+4, "#include <bits/stdc++.h>")
-        call append(line(".")+5, "")
-        call append(line(".")+6, "using namespace std;")
-        call append(line(".")+7, "")
-        call append(line(".")+8, "typedef long long ll;")
-        call append(line(".")+9, "")
-        call append(line(".")+10, "#define m_pi 3.14159255358979323846")
-        call append(line(".")+11, "// #define endl '\\n'")
-        call append(line(".")+12, "")
-        call append(line(".")+13, "int main(int argc, char **argv) {")
-        call append(line(".")+14, "    ios::sync_with_stdio(0);")
-        call append(line(".")+15, "    cin.tie(0); cout.tie(0);")
-        call append(line(".")+16, "")
-        call append(line(".")+17, "")
-        call append(line(".")+18, "    return 0;")
-        call append(line(".")+19, "}")
-        call append(line(".")+20, "")
+        call append(line("."),    " * Author: Tengh")
+        call append(line(".")+1,  " * Created Time: ".strftime("%y.%m.%d %H:%M:%S (%A)"))
+        call append(line(".")+2,  "**/")
+        call append(line(".")+3,  "")
+        call append(line(".")+4,  "#include <bits/stdc++.h>")
+        call append(line(".")+5,  "")
+        call append(line(".")+6,  "using namespace std;")
+        call append(line(".")+7,  "")
+        call append(line(".")+8,  "// #include <ext/pb_ds/assoc_container.hpp>")
+        call append(line(".")+9,  "// using namespace __gnu_pbds;")
+        call append(line(".")+10, "// typedef tree<int, null_type, less<int>, rb_tree_tag,")
+        call append(line(".")+11, "//              tree_order_statistics_node_update>")
+        call append(line(".")+12, "//     indexed_set;")
+        call append(line(".")+13, "// typedef tree<pair<int, int>, null_type, less<pair<int, int>>, rb_tree_tag,")
+        call append(line(".")+14, "//              tree_order_statistics_node_update>")
+        call append(line(".")+15, "//     indexed_set_pii;")
+        call append(line(".")+16, "// typedef tree<int, null_type, less_equal<int>, rb_tree_tag,")
+        call append(line(".")+17, "//              tree_order_statistics_node_update>")
+        call append(line(".")+18, "//     indexed_multiset;")
+        call append(line(".")+19, "")
+        call append(line(".")+20, "typedef long long ll;")
+        call append(line(".")+21, "#define m_pi 3.14159255358979323846")
+        call append(line(".")+22, "// #define endl '\\n'")
+        call append(line(".")+23, "")
+        call append(line(".")+24, "")
+        call append(line(".")+25, "int main(int argc, char **argv) {")
+        call append(line(".")+26, "    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);")
+        call append(line(".")+27, "    #ifdef LOCAL")
+        call append(line(".")+28, "    freopen(\"in1\", \"r\", stdin); freopen(\"output.txt\", \"w\", stdout);")
+        call append(line(".")+29, "    #endif")
+        call append(line(".")+30, "")
+        call append(line(".")+31, "")
+        call append(line(".")+32, "")
+        call append(line(".")+33, "    return 0;")
+        call append(line(".")+34, "}")
+        call append(line(".")+35, "")
+        call append(line(".")+36, "")
+        call append(line(".")+37, "")
+        call append(line(".")+48, "")
         " autocmd BufNewFile * normal j
-        18
+        $
+        33
 endfunc
-
-
-
 ]])
-
 
 
 
