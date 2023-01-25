@@ -148,7 +148,7 @@ func Set_init_a_cpp()
         call append(line(".")+35, "")
         call append(line(".")+36, "")
         call append(line(".")+37, "")
-        call append(line(".")+48, "")
+        call append(line(".")+38, "")
         " autocmd BufNewFile * normal j
         $
         33
