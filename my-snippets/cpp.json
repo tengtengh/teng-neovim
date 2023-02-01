@@ -99,8 +99,8 @@
 		],
 		"description": "cpp template"
 	},
-    "bitTree max template": {
-		"prefix": "bitTree_max_template",
+    "bitTree min template": {
+		"prefix": "bitTree_min_template",
 		"body": [
             "",
             "class BitTree_min {",
@@ -140,7 +140,6 @@
 		],
 		"description": "cpp template"
 	},
-,
     "inv C template": {
 		"prefix": "inv_C_template",
 		"body": [
@@ -342,7 +341,7 @@
 		],
 		"description": "cpp template"
 	},
-    "segment tree mn": {
+    "segment tree min": {
 		"prefix": "segTree_min_template",
 		"body": [
             "class segTree_min {",
