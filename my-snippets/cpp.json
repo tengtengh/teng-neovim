@@ -167,7 +167,7 @@
             "//         invfac[i - 1] = invfac[i] * i % MOD;",
             "//     }",
             "// }",
-            "// ll C(ll m, ll n) {",
+            "// ll C(ll n, ll m) {",
             "//     if (m > n || m < 0) return 0;",
             "//     return fac[n] * invfac[m] % MOD * invfac[n-m] % MOD;",
             "// }",
