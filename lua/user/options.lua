@@ -47,6 +47,12 @@ vim.g.mapleader = ';'
 vim.o.pumheight=10
 
 
+vim.lsp.set_log_level("ERROR")
+
+
+
+
+
 -- -- 重新打开文档时光标回到文档关闭前的位置 -- 参考的代码随想录作者的PowerVim
 -- vim.cmd([[
 

@@ -236,6 +236,7 @@ return require('packer').startup(function()
     })
     use 'jacoborus/tender.vim'
     use 'christianchiarulli/nvcode-color-schemes.vim'
+    use 'lycuid/vim-far'
     -- <<<<<<<<<<<<< colorschemes <<<<<<<<<<<<<
 
     -- telescope
