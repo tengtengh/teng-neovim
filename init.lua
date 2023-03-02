@@ -16,7 +16,7 @@ require('user.plugins')
 
 require('user.config')
 require('user.lsp')
-require('user.nvim-dap')
+-- require('user.nvim-dap')
 
 require("user.markdown")
 require('user.utils')

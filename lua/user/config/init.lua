@@ -33,9 +33,9 @@ else
 end
 
 
-require("user.config.indent-blankline")
+-- require("user.config.indent-blankline")
 require("user.config.telescope")
-require("user.config.nvim-spectre")
+-- require("user.config.nvim-spectre")
 require("user.config.nvim-lastplace")
 require("user.config.todo-comments")
 require("user.config.trouble")

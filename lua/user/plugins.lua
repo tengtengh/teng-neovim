@@ -31,14 +31,19 @@ return require('packer').startup(function()
     use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
     -- lsp support
+    -- use {
+    --     "williamboman/nvim-lsp-installer",
+    --     {
+    --         "neovim/nvim-lspconfig",
+    --         -- config = function()
+    --         --     require("user.config.nvim-lspconf")
+    --         -- end
+    --     }
+    -- }
     use {
-        "williamboman/nvim-lsp-installer",
-        {
-            "neovim/nvim-lspconfig",
-            -- config = function()
-            --     require("user.config.nvim-lspconf")
-            -- end
-        }
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
     }
 
     -- lsp-signature
@@ -184,8 +189,8 @@ return require('packer').startup(function()
     }
     use "mfussenegger/nvim-dap"
 
-    -- indent blankline
-    use "lukas-reineke/indent-blankline.nvim"
+    -- indent blankline // | | |表示缩进的竖线
+    -- use "lukas-reineke/indent-blankline.nvim"
 
     -- >>>>>>>>>>>>> colorschemes >>>>>>>>>>>>>
     -- 
@@ -244,8 +249,8 @@ return require('packer').startup(function()
     -- -- media file preview extension for telescope
     -- use("nvim-telescope/telescope-media-files.nvim")
 
-    -- A search panel for neovim.
-    use "nvim-pack/nvim-spectre"
+    -- A search panel for neovim. -- 更强大的查找替换
+    -- use "nvim-pack/nvim-spectre"
 
     -- 打开文件自动回到上次编辑的位置
     use 'ethanholz/nvim-lastplace'
