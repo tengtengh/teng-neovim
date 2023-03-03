@@ -112,6 +112,14 @@ endfunc
 ]])
 
 
+
+
+
+
+
+
+
+
 vim.cmd([[
 autocmd BufNewFile a.cpp exec ":call Set_init_a_cpp()"
 func Set_init_a_cpp()
@@ -121,33 +129,44 @@ func Set_init_a_cpp()
         call append(line(".")+2,  "**/")
         call append(line(".")+3,  "")
         call append(line(".")+4,  "#include <bits/stdc++.h>")
-        call append(line(".")+5,  "")
-        call append(line(".")+6,  "using namespace std;")
-        call append(line(".")+7,  "")
-        call append(line(".")+8,  "// #include <ext/pb_ds/assoc_container.hpp>")
-        call append(line(".")+9,  "// using namespace __gnu_pbds;")
-        call append(line(".")+10, "// template <class T> using indexed_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;")
-        call append(line(".")+11, "// template <class T> using indexed_multiset = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;")
-        call append(line(".")+12, "")
-        call append(line(".")+13, "typedef long long ll;")
-        call append(line(".")+14, "#define m_pi 3.14159255358979323846")
-        call append(line(".")+15, "// #define endl '\\n'")
-        call append(line(".")+16, "")
-        call append(line(".")+17, "")
-        call append(line(".")+18, "int main(int argc, char **argv) {")
-        call append(line(".")+19, "    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);")
-        call append(line(".")+20, "#ifdef LOCAL")
-        call append(line(".")+21, "    freopen(\"in1\", \"r\", stdin); freopen(\"output.txt\", \"w\", stdout);")
-        call append(line(".")+22, "#endif")
+        call append(line(".")+5,  "using namespace std;")
+        call append(line(".")+6,  "")
+        call append(line(".")+7,  "// #include <ext/pb_ds/assoc_container.hpp>")
+        call append(line(".")+8,  "// using namespace __gnu_pbds;")
+        call append(line(".")+9,  "// template <class T> using indexed_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;")
+        call append(line(".")+10, "// template <class T> using indexed_multiset = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;")
+        call append(line(".")+11, "")
+        call append(line(".")+12, "typedef long long ll;")
+        call append(line(".")+13, "#define m_pi 3.14159255358979323846")
+        call append(line(".")+14, "// #define endl '\\n'")
+        call append(line(".")+15, "")
+        call append(line(".")+16, "using pii = pair<int, int>; ")
+        call append(line(".")+17, "using pll = pair<ll, ll>;")
+        call append(line(".")+18, "vector<pair<int, int>> d4 = {{1,0},{0,1},{-1,0},{0,-1}};")
+        call append(line(".")+19, "vector<pair<int, int>> d8 = {{1,0},{0,1},{-1,0},{0,-1},{1,1},{1,-1},{-1,1},{1,-1}};")
+        call append(line(".")+20, "const int inf = 0x3f3f3f3f;")
+        call append(line(".")+21, "const ll llf = 0x3f3f3f3f3f3f3f3f;")
+        call append(line(".")+22, "")
         call append(line(".")+23, "")
-        call append(line(".")+24, "")
-        call append(line(".")+25, "")
-        call append(line(".")+26, "    return 0;")
-        call append(line(".")+27, "}")
-        call append(line(".")+28, "")
+        call append(line(".")+24, "int main(int argc, char **argv) {")
+        call append(line(".")+25, "    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);")
+        call append(line(".")+26, "#ifdef LOCAL")
+        call append(line(".")+27, "    freopen(\"in1\", \"r\", stdin); freopen(\"output.txt\", \"w\", stdout);")
+        call append(line(".")+28, "#endif")
         call append(line(".")+29, "")
         call append(line(".")+30, "")
         call append(line(".")+31, "")
+        call append(line(".")+32, "    return 0;")      
+        call append(line(".")+33, "}")                                                                                    
+        call append(line(".")+34, "")
+        call append(line(".")+35, "")
+        call append(line(".")+36, "")
+        call append(line(".")+37, "")
+        " call append(line(".")+38, "")
+        " call append(line(".")+39, "")
+        " call append(line(".")+40, "")
+        " call append(line(".")+41, "")
+        " call append(line(".")+42, "")
         " autocmd BufNewFile * normal j
         $
         25

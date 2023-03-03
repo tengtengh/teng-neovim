@@ -39,12 +39,12 @@ local is_mac = vim.fn.has("macunix") == 1
 local is_linux = not is_wsl and not is_mac
 
 -- if is_wsl then
---     colorscheme = "doom-one"
+    colorscheme = "doom-one"
 -- else
 --     colorscheme = "codedark"
 -- end
 
-colorscheme = "pablo"
+-- colorscheme = "pablo"
 
 
 
