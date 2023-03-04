@@ -1,22 +1,24 @@
 -- vim.cmd([[packadd nvim-lsp-installer]])
 
 
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not status_ok then
-    vim.notify("nvim-lsp-installer not found!")
-    return
-end
+-- local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+-- if not status_ok then
+--     vim.notify("nvim-lsp-installer not found!")
+--     return
+-- end
 
 -- local lsp_installer = require("nvim-lsp-installer")
 
 
-lsp_installer.setup({})
+-- lsp_installer.setup({})
 
 local nvim_lsp = require("lspconfig")
-
+require("mason").setup()
 
 require("user.lsp.handlers").setup()
-
+require("mason-lspconfig").setup {
+--     ensure_installed = { "lua_ls", "clangd" },
+}
 
 
 --[[
@@ -38,33 +40,41 @@ local prettier = {
 
 
 -- local servers = { "pyright", "ccls"}
-local servers = lsp_installer.get_installed_servers()
+-- local servers = lsp_installer.get_installed_servers()
+-- local servers = {}
+-- local servers = { 'clangd'}
+local servers = require("mason-lspconfig").get_installed_servers()
+-- local servers = require("mason-registry").get_installed_package_names()
 -- table.insert(servers, "ccls")
 -- for _, server in ipairs(lsp_installer.get_installed_servers()) do
 for _, server in ipairs(servers) do
+-- -- for server in servers do
     local server_opts = {
         on_attach = require("user.lsp.handlers").on_attach,
         capabilities = require("user.lsp.handlers").capabilities,
-        flags = {
-            -- This will be the default in neovim 0.7+
-            debounce_text_changes = 150,
-        }
+        -- flags = {
+        --     -- This will be the default in neovim 0.7+
+        --     debounce_text_changes = 150,
+        -- }
     }
-    if server.name == "sumneko_lua" then
-        local sumneko_lua_opts = require("user.lsp.settings.sumneko_lua")
-        server_opts = vim.tbl_deep_extend("force", sumneko_lua_opts, server_opts)
+--     -- if server.name == "sumneko_lua" then
+--     --     local sumneko_lua_opts = require("user.lsp.settings.sumneko_lua")
+--     --     server_opts = vim.tbl_deep_extend("force", sumneko_lua_opts, server_opts)
 
-    elseif server.name == "ccls" then
-        local ccls_opts = require("user.lsp.settings.ccls")
-        server_opts = vim.tbl_deep_extend("force", ccls_opts, server_opts)
+--     -- elseif server.name == "ccls" then
+--     --     local ccls_opts = require("user.lsp.settings.ccls")
+--     --     server_opts = vim.tbl_deep_extend("force", ccls_opts, server_opts)
 
-    elseif server.name == "clangd" then
-        local clangd_opts = require("user.lsp.settings.clangd")
-        server_opts = vim.tbl_deep_extend("force", clangd_opts, server_opts)
+--    -- if server.name == "clangd" then
+    -- if server == "clangd" then
+    --     local clangd_opts = require("user.lsp.settings.clangd")
+    --     server_opts = vim.tbl_deep_extend("force", clangd_opts, server_opts)
 
-    end
+    -- end
 
-    nvim_lsp[server.name].setup(server_opts)
+    -- nvim_lsp[server.name].setup(server_opts)
+    nvim_lsp[server].setup(server_opts)
+    -- nvim_lsp['clangd'].setup(server_opts)
 
 end
 

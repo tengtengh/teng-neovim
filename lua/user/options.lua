@@ -50,6 +50,8 @@ vim.o.pumheight=10
 vim.lsp.set_log_level("ERROR")
 
 
+-- 2023.03.02: 智能下滚翻页，预留5行
+vim.o.scrolloff=5
 
 
 
