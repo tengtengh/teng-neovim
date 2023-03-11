@@ -47,7 +47,7 @@ vim.g.mapleader = ';'
 vim.o.pumheight=10
 
 
-vim.lsp.set_log_level("ERROR")
+-- vim.lsp.set_log_level("ERROR")
 
 
 -- 2023.03.02: 智能下滚翻页，预留5行
@@ -171,7 +171,7 @@ func Set_init_a_cpp()
         " call append(line(".")+42, "")
         " autocmd BufNewFile * normal j
         $
-        25
+        31
 endfunc
 ]])
 
