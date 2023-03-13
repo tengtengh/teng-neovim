@@ -171,7 +171,7 @@ return require('packer').startup(function()
     -- autopairs
     use 'windwp/nvim-autopairs'
 
-    -- Made neovim syntax highlighting more
+    -- -- Made neovim syntax highlighting more
     -- use {
     --     'nvim-treesitter/nvim-treesitter',
     --     run = ':TSUpdate'
@@ -199,7 +199,7 @@ return require('packer').startup(function()
     -- -- use "lunarvim/colorschemes"
     --
     -- colorscheme -- EdenEast/nightfox.nvim
-    -- use "EdenEast/nightfox.nvim"
+    use "EdenEast/nightfox.nvim"
     -- colorscheme -- vscode.nvim
     use 'Mofiqul/vscode.nvim'
     -- --  colorscheme   -- blue-moon
@@ -225,8 +225,8 @@ return require('packer').startup(function()
     use 'folke/tokyonight.nvim'
     -- colorscheme -- emacs style (light)
     use 'ishan9299/modus-theme-vim'
-    -- colorscheme -- onenord
-    use 'rmehri01/onenord.nvim'
+    -- -- colorscheme -- onenord
+    -- use 'rmehri01/onenord.nvim'
     -- colorscheme -- monokai styles
     use 'tanvirtin/monokai.nvim'
     -- use "tengtengh/one_monokai.nvim" -- TODO: 禁用斜体
