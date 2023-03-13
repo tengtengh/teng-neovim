@@ -172,13 +172,10 @@ return require('packer').startup(function()
     use 'windwp/nvim-autopairs'
 
     -- Made neovim syntax highlighting more
-    -- use {
-    --     'nvim-treesitter/nvim-treesitter',
-    --     -- branch = "0.5-compat",
-    --     -- tag = "v0.8.0",
-    --     run = ':TSUpdate',
-    -- }
-
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
 
     -- Debugger
     use 'ravenxrz/dapinstall.nvim'

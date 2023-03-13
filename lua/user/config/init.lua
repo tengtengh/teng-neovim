@@ -24,7 +24,7 @@ require("user.config.nvim-autopairs")
 
 -- if is_wsl then
 -- else
---     require("user.config.treesitter")
+    require("user.config.treesitter")
 -- end
 
 if vim.fn.has('nvim-0.9') == 1 then
