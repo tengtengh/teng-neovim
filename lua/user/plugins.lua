@@ -62,17 +62,17 @@ return require('packer').startup(function()
     -- lsp ui
     -- TODO: 有空配置一下
     -- use { 'kkharji/lspsaga.nvim' }
-    use({
-        "glepnir/lspsaga.nvim",
-        branch = "main",
-        -- config = function()
-        --     local saga = require("lspsaga")
+    -- use({
+    --     "glepnir/lspsaga.nvim",
+    --     branch = "main",
+    --     -- config = function()
+    --     --     local saga = require("lspsaga")
 
-        --     saga.init_lsp_saga({
-        --         -- your configuration
-        --     })
-        -- end,
-    })
+    --     --     saga.init_lsp_saga({
+    --     --         -- your configuration
+    --     --     })
+    --     -- end,
+    -- })
 
 
 
@@ -160,10 +160,10 @@ return require('packer').startup(function()
     -- <<<<<<<<<<<< Markdown <<<<<<<<<<<<
 
     -- terminal intergration
-    use {
-        "akinsho/toggleterm.nvim",
-        tag = 'v2.*',
-    }
+    -- use {
+    --     "akinsho/toggleterm.nvim",
+    --     tag = 'v2.*',
+    -- }
 
     -- notify
     use "rcarriga/nvim-notify"
@@ -172,19 +172,23 @@ return require('packer').startup(function()
     use 'windwp/nvim-autopairs'
 
     -- Made neovim syntax highlighting more
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
+    -- use {
+    --     'nvim-treesitter/nvim-treesitter',
+    --     run = ':TSUpdate'
+    -- }
 
-    -- Debugger
-    use 'ravenxrz/dapinstall.nvim'
-    use 'theHamsta/nvim-dap-virtual-text'
-    use {
-        "rcarriga/nvim-dap-ui",
-        -- tag = "v0.34.0",
-    }
-    use "mfussenegger/nvim-dap"
+    -- -- >>>>>>>>>> Debugger >>>>>>>>>>>>>>
+    -- use 'ravenxrz/dapinstall.nvim'
+    -- use 'theHamsta/nvim-dap-virtual-text'
+    -- use {
+    --     "rcarriga/nvim-dap-ui",
+    --     -- tag = "v0.34.0",
+    -- }
+    -- use "mfussenegger/nvim-dap"
+    -- -- <<<<<<<<< Debugger <<<<<<<<<<<<<<
+
+
+
 
     -- indent blankline // | | |表示缩进的竖线
     -- use "lukas-reineke/indent-blankline.nvim"
@@ -195,11 +199,11 @@ return require('packer').startup(function()
     -- -- use "lunarvim/colorschemes"
     --
     -- colorscheme -- EdenEast/nightfox.nvim
-    use "EdenEast/nightfox.nvim"
+    -- use "EdenEast/nightfox.nvim"
     -- colorscheme -- vscode.nvim
     use 'Mofiqul/vscode.nvim'
-    --  colorscheme   -- blue-moon
-    use "kyazdani42/blue-moon"
+    -- --  colorscheme   -- blue-moon
+    -- use "kyazdani42/blue-moon"
     -- colorscheme  -- onedarkpro
     use "olimorris/onedarkpro.nvim"
     -- colorscheme -- github-nvim-theme
@@ -216,7 +220,7 @@ return require('packer').startup(function()
     use 'NTBBloodbath/doom-one.nvim'
 
     -- colorscheme -- onedark.nvim
-    use 'navarasu/onedark.nvim'
+    -- use 'navarasu/onedark.nvim'
     -- tokyonight
     use 'folke/tokyonight.nvim'
     -- colorscheme -- emacs style (light)
@@ -225,20 +229,20 @@ return require('packer').startup(function()
     use 'rmehri01/onenord.nvim'
     -- colorscheme -- monokai styles
     use 'tanvirtin/monokai.nvim'
-    use "tengtengh/one_monokai.nvim" -- TODO: 禁用斜体
+    -- use "tengtengh/one_monokai.nvim" -- TODO: 禁用斜体
     -- colorscheme -- dracula
     use 'Mofiqul/dracula.nvim'
-    use 'p00f/alabaster.nvim'
+    -- use 'p00f/alabaster.nvim'
     use "rafamadriz/neon"
-    use 'marko-cerovac/material.nvim'
-    use "tomasiser/vim-code-dark"
-    use "lewpoly/sherbet.nvim"
+    -- use 'marko-cerovac/material.nvim'
+    -- use "tomasiser/vim-code-dark"
+    -- use "lewpoly/sherbet.nvim"
     use({
         'glepnir/zephyr-nvim',
     })
-    use 'jacoborus/tender.vim'
-    use 'christianchiarulli/nvcode-color-schemes.vim'
-    use 'lycuid/vim-far'
+    -- use 'jacoborus/tender.vim'
+    -- use 'christianchiarulli/nvcode-color-schemes.vim'
+    -- use 'lycuid/vim-far'
     -- <<<<<<<<<<<<< colorschemes <<<<<<<<<<<<<
 
     -- telescope
@@ -263,13 +267,7 @@ return require('packer').startup(function()
         -- requires = "nvim-lua/plenary.nvim",
     }
 
-    use "folke/trouble.nvim"
-
-    -- vim-translate
-    -- use 'voldikss/vim-translator'
-    use { 'uga-rosa/translate.nvim' }
-
-    use 'ianva/vim-youdao-translater'
+    -- use "folke/trouble.nvim"
 
 
 

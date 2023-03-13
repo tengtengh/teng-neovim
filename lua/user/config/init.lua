@@ -18,19 +18,19 @@ require('user.config.aerial')
 require("user.config.bufferline")
 require("user.config.gitsigns")
 require("user.config.lualine")
-require("user.config.toggleterm")
+-- require("user.config.toggleterm")
 require("user.config.nvim-notify")
 require("user.config.nvim-autopairs")
 
+-- -- treesitter
 -- if is_wsl then
 -- else
-    require("user.config.treesitter")
+    -- require("user.config.treesitter")
 -- end
-
-if vim.fn.has('nvim-0.9') == 1 then
-else
-     require("user.config.treesitter")
-end
+-- if vim.fn.has('nvim-0.9') == 1 then
+-- else
+--      require("user.config.treesitter")
+-- end
 
 
 -- require("user.config.indent-blankline")
@@ -38,10 +38,7 @@ require("user.config.telescope")
 -- require("user.config.nvim-spectre")
 require("user.config.nvim-lastplace")
 require("user.config.todo-comments")
-require("user.config.trouble")
-require("user.config.vim-translator")
-require("user.config.vim-youdao-translater")
-require("user.config.translate")
+-- require("user.config.trouble")
 require("user.config.illuminate")
 
 
