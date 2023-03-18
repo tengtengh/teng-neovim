@@ -26,6 +26,7 @@ return require('packer').startup(function()
             { "hrsh7th/cmp-cmdline" },
         },
     })
+    
 
     --  loading vscode snippets
     use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
